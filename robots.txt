@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://psicologiadoemagrecimento.com/sitemap.xml
