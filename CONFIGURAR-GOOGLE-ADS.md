@@ -4,8 +4,8 @@ O site já preserva UTMs e `gclid`, envia `landing_view` e `begin_checkout` ao `
 
 ## Dados que ainda precisam vir da conta Google
 
-- ID da tag Google, no formato `G-...` ou `AW-...`.
-- ID/rótulo da ação de conversão de compra.
+- Tag Google Ads instalada no site: `AW-18269319435`.
+- Ação de conversão recebida: `AW-18269319435/byztCLr5ysgcEIvivodE`.
 - Valor efetivamente cobrado, caso existam preços ou cupons diferentes.
 
 ## Conversão principal: compra aprovada
@@ -21,6 +21,20 @@ Configure na Kiwify a integração oficial do Google Ads, quando disponível, ou
 - atribuição: orientada por dados, quando disponível.
 
 Não use o clique no botão como compra. O evento `begin_checkout` do site deve ser uma conversão secundária.
+
+O evento de compra **não foi colocado na página de vendas**, pois isso registraria visitantes como compradores. Configure este evento apenas na confirmação de pagamento da Kiwify:
+
+```html
+<script>
+gtag('event', 'conversion', {
+  'send_to': 'AW-18269319435/byztCLr5ysgcEIvivodE',
+  'value': 147.0,
+  'currency': 'BRL'
+});
+</script>
+```
+
+Se a Kiwify fornecer o valor real e o identificador da transação automaticamente, prefira os campos dinâmicos da integração. O valor `1.0` do código originalmente fornecido não representa o preço de R$ 147.
 
 ## Teste obrigatório
 
