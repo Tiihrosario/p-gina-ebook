@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psicologia do Emagrecimento | Método RAEM para Fome Emocional e Efeito Sanfona</title>
+<meta name="description" content="Ebook Psicologia do Emagrecimento: entenda a fome emocional, a autossabotagem e o efeito sanfona com o método RAEM — exercícios práticos para mudar sua relação com a comida.">
+<meta property="og:title" content="Psicologia do Emagrecimento | Método RAEM">
+<meta property="og:description" content="Entenda a fome emocional, a autossabotagem e o efeito sanfona com exercícios práticos para mudar sua relação com a comida.">
+<meta property="og:image" content="https://psicologiadoemagrecimento.com/novo_site_assets/ebook.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2C4531;
+    --ink-2:#233729;
+    --ink-3:#385541;
+    --bone:#F1ECE1;
+    --bone-2:#E7DFCE;
+    --bone-3:#DCD2BB;
+    --clay:#A8632F;
+    --clay-dark:#8A4F22;
+    --clay-light:#C98A54;
+    --sage:#6B7A5E;
+    --sage-dark:#54614A;
+    --rust:#8B4638;
+    --ink-soft:rgba(28,33,29,0.68);
+    --bone-soft:rgba(241,236,225,0.7);
+    --font-display:'Fraunces', serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+    --container: 1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; overflow-x:hidden; max-width:100%;}
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    background:var(--bone);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    max-width:100%;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--container);margin:0 auto;padding:0 32px;}
+  h1,h2,h3,h4{font-family:var(--font-display);margin:0;font-weight:500;letter-spacing:-0.01em; overflow-wrap:break-word; word-break:normal;}
+  p{margin:0; overflow-wrap:break-word;}
+  /* Grid/flex children default to min-width:auto, which blocks text wrapping and causes
+     horizontal overflow on narrow screens. Force them to allow shrinking. */
+  .hero-grid > *, .raem-wrap > *, .found-grid > *, .author-grid > *, .testi-grid > *,
+  .shift-grid > *, .fit-grid > *, .tools-grid > *, .strip .wrap > *,
+  nav.wrap > *, .footer-row > *, .offer-line, .hero-list li, .fit-col li, .shift-col li,
+  .nav-links{min-width:0;}
+  button{font-family:inherit;border:none;background:none;cursor:pointer;color:inherit;}
+  ::selection{background:var(--clay);color:var(--bone);}
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;height:1px;
+    background:currentColor;
+    opacity:0.55;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:17px 30px;
+    border-radius:3px;
+    font-weight:600;
+    font-size:15.5px;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, background .3s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--clay);
+    color:var(--bone);
+    box-shadow:0 1px 0 rgba(0,0,0,0.08);
+  }
+  .btn-primary:hover{background:var(--clay-dark); transform:translateY(-2px); box-shadow:0 10px 24px rgba(139,79,34,0.28);}
+  .btn-ghost-dark{
+    border:1px solid rgba(241,236,225,0.3);
+    color:var(--bone);
+  }
+  .btn-ghost-dark:hover{border-color:rgba(241,236,225,0.65); background:rgba(241,236,225,0.06);}
+  .btn-arrow{transition:transform .3s ease;}
+  .btn:hover .btn-arrow{transform:translateX(3px);}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(22px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ===== NAV ===== */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(28,33,29,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(241,236,225,0.08);
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:76px;
+  }
+  .brand{
+    font-family:var(--font-display);
+    font-size:19px;
+    color:var(--bone);
+    letter-spacing:0.01em;
+    font-style:italic;
+    font-weight:500;
+  }
+  .nav-links{display:flex; align-items:center; gap:34px;}
+  .nav-links a{
+    color:var(--bone-soft);
+    font-size:13.5px;
+    font-weight:500;
+    letter-spacing:0.01em;
+    transition:color .25s ease;
+  }
+  .nav-links a:hover{color:var(--bone);}
+  .nav-cta{display:none;}
+  .nav-toggle{display:none;}
+
+  @media (max-width:900px){
+    .nav-links{
+      position:fixed; top:76px; left:0; right:0; bottom:0;
+      background:var(--ink); flex-direction:column; align-items:flex-start;
+      padding:36px 32px; gap:26px; font-size:16px;
+      transform:translateY(-8px); opacity:0; visibility:hidden;
+      transition:opacity .3s ease, transform .3s ease, visibility .3s;
+    }
+    .nav-links.open{opacity:1; transform:translateY(0); visibility:visible;}
+    .nav-toggle{
+      display:block; color:var(--bone); font-size:26px; line-height:1;
+    }
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    background:
+      radial-gradient(ellipse 900px 500px at 82% -10%, rgba(168,99,47,0.18), transparent 60%),
+      var(--ink);
+    color:var(--bone);
+    position:relative;
+    padding:96px 0 0;
+    overflow:hidden;
+  }
+  .hero-top{
+    display:flex; justify-content:center; padding-bottom:36px;
+  }
+  .hero-banner{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:0.06em;
+    color:var(--bone-soft);
+    border:1px solid rgba(241,236,225,0.18);
+    padding:9px 18px;
+    border-radius:100px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .hero-banner .dot{width:6px;height:6px;border-radius:50%;background:var(--clay-light);}
+
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr 0.85fr;
+    gap:60px; align-items:center;
+    padding-bottom:70px;
+  }
+  .hero-eyebrow{color:var(--clay-light); margin-bottom:22px;}
+  .hero h1{
+    font-size:clamp(34px, 4.4vw, 54px);
+    line-height:1.08;
+    color:var(--bone);
+  }
+  .hero h1 em{
+    font-style:italic; color:var(--clay-light); font-weight:400;
+  }
+  .hero-sub{
+    margin-top:24px;
+    font-size:17.5px;
+    color:var(--bone-soft);
+    max-width:480px;
+    line-height:1.65;
+  }
+  .hero-list{
+    list-style:none; padding:0; margin:30px 0 0;
+    display:flex; flex-direction:column; gap:12px;
+  }
+  .hero-list li{
+    display:flex; gap:12px; align-items:flex-start;
+    font-size:15px; color:var(--bone-soft);
+  }
+  .hero-list .mark{color:var(--sage); font-family:var(--font-mono); font-size:13px; margin-top:2px;}
+  .hero-ctas{display:flex; gap:14px; margin-top:38px; flex-wrap:wrap;}
+  .hero-trust{
+    margin-top:22px; font-size:12.5px; color:var(--bone-soft);
+    display:flex; gap:8px; align-items:center;
+  }
+
+  .hero-visual{position:relative; display:flex; justify-content:center;}
+  .hero-visual-inner{
+    position:relative;
+    transform:rotate(3.2deg);
+    transition:transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+  .hero-visual:hover .hero-visual-inner{transform:rotate(0.5deg) translateY(-6px);}
+  .hero-visual img{
+    width:340px;
+    border-radius:4px;
+    box-shadow:0 30px 70px -20px rgba(0,0,0,0.55), 0 0 0 1px rgba(241,236,225,0.06);
+  }
+  .hero-visual::before{
+    content:"";
+    position:absolute; width:280px; height:280px;
+    background:radial-gradient(circle, rgba(168,99,47,0.35), transparent 70%);
+    filter:blur(30px); top:10%; right:10%; z-index:0;
+  }
+
+  .hero-divider{
+    height:1px; background:linear-gradient(90deg, transparent, rgba(241,236,225,0.14), transparent);
+  }
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr; padding-bottom:50px;}
+    .hero-visual{order:-1; margin-bottom:8px;}
+    .hero-visual img{width:220px;}
+  }
+
+  /* ===== VALUE STRIP ===== */
+  .strip{
+    background:var(--bone);
+    border-bottom:1px solid var(--bone-3);
+  }
+  .strip .wrap{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    padding:30px 32px;
+  }
+  .strip-item{
+    padding:0 22px; border-left:1px solid var(--bone-3);
+  }
+  .strip-item:first-child{border-left:none; padding-left:0;}
+  .strip-item h4{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:15.5px;
+    margin-bottom:6px;
+    font-weight:700;
+    font-family:var(--font-body);
+  }
+  .strip-icon{
+    font-size:18px;
+    line-height:1;
+    flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .strip-item p{font-size:13.5px; color:var(--ink-soft); line-height:1.55;}
+
+  @media (max-width:860px){
+    .strip .wrap{grid-template-columns:1fr 1fr; gap:28px 0;}
+    .strip-item:nth-child(3){border-left:none;}
+    .strip-item{border-left:none; padding-left:0; padding-right:16px;}
+  }
+
+  /* ===== SECTION GENERIC ===== */
+  section{padding:92px 0;}
+  .section-head{max-width:640px; margin-bottom:64px;}
+  .section-head .eyebrow{color:var(--clay-dark); margin-bottom:18px;}
+  .section-head h2{font-size:clamp(26px,3.2vw,38px); line-height:1.18;}
+  .section-head p{margin-top:16px; font-size:16px; color:var(--ink-soft); max-width:560px;}
+  .center{text-align:center; margin-left:auto; margin-right:auto;}
+
+  /* ===== RAEM CYCLE (signature) ===== */
+  .method{background:var(--bone);}
+  .raem-wrap{
+    display:grid; grid-template-columns:0.85fr 1.15fr; gap:70px; align-items:center;
+  }
+  .raem-diagram{position:relative; aspect-ratio:1/1; max-width:460px; margin:0 auto;}
+  .raem-diagram svg{width:100%; height:100%;}
+  .raem-path{
+    fill:none; stroke:var(--clay); stroke-width:1.4; stroke-dasharray:6 6;
+    opacity:0.5;
+  }
+  .raem-path-draw{
+    fill:none; stroke:var(--clay); stroke-width:1.6;
+    stroke-dasharray:900; stroke-dashoffset:900;
+    transition:stroke-dashoffset 2.2s cubic-bezier(.3,.7,.3,1);
+  }
+  .method.is-active .raem-path-draw{stroke-dashoffset:0;}
+  .raem-node{
+    position:absolute; width:104px; height:104px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    background:var(--ink); color:var(--bone);
+    border-radius:50%;
+    cursor:pointer;
+    transition:transform .3s ease, background .3s ease;
+    text-align:center;
+  }
+  .raem-node:hover, .raem-node.active{background:var(--clay); transform:scale(1.06);}
+  .raem-node .letter{font-family:var(--font-display); font-style:italic; font-size:26px; line-height:1;}
+  .raem-node .label{font-family:var(--font-mono); font-size:9px; letter-spacing:0.06em; text-transform:uppercase; margin-top:5px; opacity:0.75;}
+  .raem-node.n1{top:0; left:50%; transform:translate(-50%,0);}
+  .raem-node.n2{top:50%; right:0; transform:translate(0,-50%);}
+  .raem-node.n3{bottom:0; left:50%; transform:translate(-50%,0);}
+  .raem-node.n4{top:50%; left:0; transform:translate(0,-50%);}
+  .raem-node.n2:hover, .raem-node.n2.active{transform:translate(0,-50%) scale(1.06);}
+  .raem-node.n4:hover, .raem-node.n4.active{transform:translate(0,-50%) scale(1.06);}
+  .raem-center{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    text-align:center; width:120px;
+  }
+  .raem-center .k{font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; color:var(--ink-soft); text-transform:uppercase;}
+  .raem-center .m{font-family:var(--font-display); font-style:italic; font-size:22px; margin-top:4px;}
+
+  .raem-detail{min-height:210px;}
+  .raem-phase-tag{font-family:var(--font-mono); font-size:11.5px; color:var(--clay-dark); letter-spacing:0.08em; text-transform:uppercase;}
+  .raem-detail h3{font-size:25px; margin-top:12px; line-height:1.25;}
+  .raem-detail p{margin-top:14px; font-size:15.5px; color:var(--ink-soft); max-width:480px;}
+  .raem-tabs{display:flex; gap:8px; margin-top:30px; flex-wrap:wrap;}
+  .raem-tab{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:0.04em;
+    padding:8px 14px; border:1px solid var(--bone-3); border-radius:100px;
+    color:var(--ink-soft); transition:all .25s ease;
+  }
+  .raem-tab.active{background:var(--ink); color:var(--bone); border-color:var(--ink);}
+
+  @media (max-width:900px){
+    .raem-wrap{grid-template-columns:1fr;}
+    .raem-diagram{max-width:320px;}
+    .raem-node{width:82px; height:82px;}
+    .raem-node .letter{font-size:20px;}
+  }
+
+  /* ===== FOUNDATIONS ===== */
+  .found{background:var(--ink); color:var(--bone);}
+  .found .section-head .eyebrow{color:var(--clay-light);}
+  .found .section-head p{color:var(--bone-soft);}
+  .found-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(241,236,225,0.1); border:1px solid rgba(241,236,225,0.1);}
+  .found-card{background:var(--ink); padding:34px 28px;}
+  .found-card .n{font-family:var(--font-mono); font-size:11px; color:var(--clay-light); letter-spacing:0.05em;}
+  .found-card h4{font-family:var(--font-display); font-weight:500; font-size:19px; margin-top:16px;}
+  .found-card p{margin-top:10px; font-size:14px; color:var(--bone-soft); line-height:1.6;}
+  .found-note{
+    margin-top:44px; padding:20px 24px; border-left:2px solid var(--clay-light);
+    font-size:13.5px; color:var(--bone-soft); max-width:760px;
+  }
+  .found-note strong{color:var(--bone); font-weight:600;}
+
+  @media (max-width:900px){
+    .found-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){
+    .found-grid{grid-template-columns:1fr;}
+  }
+
+  /* ===== AUTHOR ===== */
+  .author-grid{display:grid; grid-template-columns:0.62fr 1fr; gap:64px; align-items:center;}
+  .author-img-wrap{position:relative;}
+  .author-img-wrap img{border-radius:4px; filter:grayscale(0.15);}
+  .author-img-wrap::after{
+    content:""; position:absolute; inset:-14px -14px auto auto; width:70%; height:70%;
+    border:1px solid var(--clay); z-index:-1; border-radius:4px;
+  }
+  .author-copy .eyebrow{color:var(--clay-dark); margin-bottom:18px;}
+  .author-copy h2{font-size:clamp(24px,2.8vw,32px); line-height:1.25;}
+  .author-copy p{margin-top:18px; font-size:15.5px; color:var(--ink-soft); line-height:1.7;}
+  .author-copy p + p{margin-top:14px;}
+
+  @media (max-width:860px){
+    .author-grid{grid-template-columns:1fr;}
+    .author-img-wrap{max-width:220px;}
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testi{background:var(--bone-2);}
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--bone-3); border:1px solid var(--bone-3);}
+  .testi-card{background:var(--bone-2); padding:34px 32px;}
+  .testi-stars{color:var(--clay); font-size:13px; letter-spacing:2px;}
+  .testi-card p{margin-top:16px; font-size:15px; line-height:1.7; color:var(--ink); font-family:var(--font-display); font-weight:400;}
+  .testi-who{margin-top:20px; font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); letter-spacing:0.02em;}
+
+  @media (max-width:900px){.testi-grid{grid-template-columns:1fr;}}
+
+  /* ===== BEFORE/AFTER ===== */
+  .shift{background:var(--bone);}
+  .shift-grid{display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--bone-3); border-radius:6px; overflow:hidden;}
+  .shift-col{padding:44px 40px;}
+  .shift-before{background:rgba(139,70,56,0.07);}
+  .shift-after{background:rgba(107,122,94,0.09);}
+  .shift-col h3{font-family:var(--font-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500;}
+  .shift-before h3{color:var(--rust);}
+  .shift-after h3{color:var(--sage-dark);}
+  .shift-col ul{list-style:none; padding:0; margin:26px 0 0; display:flex; flex-direction:column; gap:15px;}
+  .shift-col li{display:flex; gap:12px; font-size:15px; align-items:flex-start;}
+  .shift-before li{color:var(--ink);}
+  .shift-mark{font-family:var(--font-mono); font-size:13px; margin-top:2px;}
+  .shift-before .shift-mark{color:var(--rust);}
+  .shift-after .shift-mark{color:var(--sage-dark);}
+
+  @media (max-width:760px){.shift-grid{grid-template-columns:1fr;}}
+
+  /* ===== FIT ===== */
+  .fit{background:var(--ink); color:var(--bone);}
+  .fit-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+  .fit-col .eyebrow{margin-bottom:20px;}
+  .fit-yes .eyebrow{color:var(--sage);}
+  .fit-no .eyebrow{color:var(--rust);}
+  .fit-col h3{font-size:22px; margin-bottom:22px; font-weight:500;}
+  .fit-col ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:16px;}
+  .fit-col li{display:flex; gap:12px; font-size:15px; color:var(--bone-soft); align-items:flex-start;}
+  .fit-col .arrow{font-family:var(--font-mono); font-size:13px; margin-top:2px;}
+  .fit-yes .arrow{color:var(--sage);}
+  .fit-no .arrow{color:var(--rust);}
+  .fit-cta{margin-top:48px; text-align:center;}
+
+  @media (max-width:760px){.fit-grid{grid-template-columns:1fr; gap:44px;}}
+
+  /* ===== TOOLS ===== */
+  .tools-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .tool-card{
+    background:var(--bone-2); border:1px solid var(--bone-3); padding:30px 30px; border-radius:5px;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .tool-card:hover{transform:translateY(-4px); box-shadow:0 20px 40px -20px rgba(28,33,29,0.2);}
+  .tool-title{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-size:18px;
+    margin-top:0;
+    font-weight:600;
+    line-height:1.25;
+  }
+  .tool-icon{
+    font-size:20px;
+    line-height:1;
+    flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .tool-card p{margin-top:12px; font-size:14px; color:var(--ink-soft); line-height:1.65;}
+
+  @media (max-width:860px){.tools-grid{grid-template-columns:1fr;}}
+
+
+
+
+  /* ===== LEAD MAGNET ===== */
+  .leadmagnet{background:var(--bone-2);padding:82px 0;}
+  .lead-box{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;
+    background:var(--bone);border:1px solid var(--bone-3);border-radius:8px;
+    padding:46px;box-shadow:0 24px 60px -42px rgba(28,33,29,.35);
+  }
+  .lead-copy .eyebrow{color:var(--clay-dark);margin-bottom:16px;}
+  .lead-copy h2{font-size:clamp(27px,3.2vw,39px);line-height:1.15;}
+  .lead-copy p{margin-top:16px;color:var(--ink-soft);font-size:15.5px;max-width:560px;}
+  .lead-mini{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;}
+  .lead-mini span{font-family:var(--font-mono);font-size:10.5px;border:1px solid var(--bone-3);padding:7px 10px;border-radius:999px;color:var(--ink-soft);}
+  .lead-form{display:grid;gap:13px;}
+  .lead-form input[type="email"]{
+    width:100%;border:1px solid var(--bone-3);background:#fbf7ef;color:var(--ink);
+    border-radius:4px;padding:17px 18px;font:inherit;outline:none;
+  }
+  .lead-form input[type="email"]:focus{border-color:var(--clay);box-shadow:0 0 0 3px rgba(168,99,47,.1);}
+  .lead-consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--ink-soft);line-height:1.45;}
+  .lead-consent input{margin-top:3px;}
+  .lead-status{min-height:22px;font-size:13px;font-weight:600;}
+  .lead-status.error{color:var(--rust);}
+  .lead-status.success{color:var(--sage-dark);}
+  .lead-privacy{font-size:11.5px;color:var(--ink-soft);}
+  @media(max-width:820px){
+    .leadmagnet{padding:62px 0;}
+    .lead-box{grid-template-columns:1fr;padding:30px 24px;gap:28px;}
+  }
+
+  /* ===== BRIDGE ===== */
+  .bridge{padding:72px 0;background:var(--bone-2);}
+  .bridge-box{max-width:820px;margin:0 auto;text-align:center;}
+  .bridge-box .eyebrow{color:var(--clay-dark);margin-bottom:18px;}
+  .bridge-box .eyebrow::before{display:none;}
+  .bridge-box h2{font-size:clamp(24px,3vw,34px);line-height:1.24;}
+  .bridge-box p{max-width:650px;margin:18px auto 0;color:var(--ink-soft);font-size:15.5px;}
+
+  /* ===== OFFER ===== */
+  .offer{background:var(--ink); color:var(--bone);}
+  .offer-box{
+    max-width:620px; margin:0 auto;
+    border:1px solid rgba(241,236,225,0.16); border-radius:6px;
+    padding:52px 48px; background:rgba(241,236,225,0.02);
+  }
+  .offer-line{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:14px 0; border-bottom:1px solid rgba(241,236,225,0.1);
+    font-size:15px;
+  }
+  .offer-line:first-child{padding-top:0;}
+  .offer-line .name{color:var(--bone-soft);}
+  .offer-line .val{font-family:var(--font-mono); font-size:13.5px; color:var(--bone-soft);}
+  .offer-total-row{display:flex; justify-content:space-between; align-items:baseline; padding-top:22px;}
+  .offer-was{font-family:var(--font-mono); font-size:14px; color:var(--bone-soft); text-decoration:line-through; opacity:0.6;}
+  .offer-price-block{text-align:right; margin-top:8px;}
+  .offer-today{font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--clay-light);}
+  .offer-price{font-family:var(--font-display); font-size:52px; margin-top:6px; line-height:1;}
+  .offer-install{font-size:13px; color:var(--bone-soft); margin-top:8px;}
+  .offer-cta{margin-top:34px;}
+  .offer-cta .btn{width:100%; justify-content:center;}
+  .offer-badges{
+    display:flex; flex-wrap:wrap; gap:18px; justify-content:center;
+    margin-top:26px; font-size:12.5px; color:var(--bone-soft);
+  }
+  .offer-disclaimer{
+    max-width:640px; margin:36px auto 0; text-align:center;
+    font-size:12.5px; color:var(--bone-soft); line-height:1.7;
+  }
+
+  @media (max-width:560px){
+    .offer-box{padding:36px 26px;}
+    .offer-total-row{flex-direction:column; align-items:flex-start; gap:16px;}
+    .offer-price-block{text-align:left;}
+  }
+
+  /* ===== FAQ ===== */
+  .faq-list{max-width:760px;}
+  .faq-item{border-bottom:1px solid var(--bone-3);}
+  .faq-q{
+    width:100%; text-align:left; padding:24px 0; display:flex; justify-content:space-between; align-items:center;
+    font-size:16.5px; font-weight:500; font-family:var(--font-body);
+  }
+  .faq-q .plus{font-family:var(--font-mono); font-size:18px; color:var(--clay); transition:transform .3s ease;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .4s ease;}
+  .faq-a-inner{padding-bottom:24px; font-size:15px; color:var(--ink-soft); line-height:1.7; max-width:640px;}
+
+  /* ===== FINAL CTA ===== */
+  .final{
+    background:var(--ink); color:var(--bone); text-align:center;
+    position:relative; overflow:hidden;
+  }
+  .final::before{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(ellipse 700px 400px at 50% 0%, rgba(168,99,47,0.16), transparent 65%);
+  }
+  .final-inner{position:relative; max-width:640px; margin:0 auto;}
+  .final h2{font-size:clamp(26px,3.4vw,38px); line-height:1.25;}
+  .final .cta-row{margin-top:36px; display:flex; justify-content:center; gap:16px; flex-wrap:wrap;}
+  .final-sub{margin-top:18px; font-size:14px; color:var(--bone-soft);}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--ink); border-top:1px solid rgba(241,236,225,0.1); padding:40px 0;}
+  .footer-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .footer-brand{font-family:var(--font-display); font-style:italic; color:var(--bone); font-size:15px;}
+  .footer-links{display:flex; gap:22px; font-size:12.5px; color:var(--bone-soft);}
+  .footer-links a:hover{color:var(--bone);}
+  .footer-copy{font-size:12px; color:var(--bone-soft); margin-top:20px;}
+
+  @media (max-width:640px){
+    section{padding:68px 0;}
+    .wrap{padding:0 22px;}
+    .hero h1 br.brk{display:none;}
+  }
+
+  @media (max-width:768px){
+    .hero{padding-top:28px;}
+    .hero-top{padding-bottom:14px;}
+    .hero-grid{gap:24px;padding-bottom:44px;}
+    .hero-visual{margin-bottom:0;}
+    .hero-visual img{width:205px;}
+    .hero-banner{font-size:10.5px;line-height:1.45;padding:8px 14px;text-align:left;}
+    .hero h1{font-size:clamp(38px,11.2vw,52px);line-height:1.03;}
+    .hero-sub{font-size:16px;}
+    .btn{white-space:normal;text-align:center;justify-content:center;width:100%;}
+    .faq-list,.faq-item,.faq-q,.faq-a,.faq-a-inner{width:100%;max-width:100%;min-width:0;}
+    .faq-q{gap:16px;padding:22px 0;font-size:15.5px;align-items:flex-start;}
+    .faq-q span:first-child{min-width:0;overflow-wrap:anywhere;word-break:normal;}
+    .faq-q .plus{flex:0 0 auto;margin-left:auto;}
+    #perguntas .wrap{overflow:hidden;}
+  }
+
+
+  @media (max-width:640px){
+    .strip .wrap{padding:26px 22px;gap:22px 0;}
+    .strip-item h4{font-size:14.5px;gap:8px;}
+    .strip-item p{font-size:13px;}
+  }
+
+
+  /* Correção estrutural do FAQ */
+  #perguntas .wrap{width:100%;max-width:var(--container);margin:0 auto;}
+  .faq-list{
+    width:100%;
+    max-width:760px;
+    margin:0;
+    overflow:hidden;
+  }
+  .faq-item{
+    width:100%;
+    max-width:100%;
+    border-bottom:1px solid var(--bone-3);
+  }
+  .faq-q{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:18px;
+    align-items:center;
+    padding:24px 0;
+    text-align:left;
+  }
+  .faq-q > span:first-child{
+    min-width:0;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  .faq-q .plus{
+    flex:none;
+    justify-self:end;
+  }
+  .faq-a,.faq-a-inner{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+  @media(max-width:640px){
+    .faq-list{max-width:100%;}
+    .faq-q{font-size:15.5px;gap:14px;padding:21px 0;}
+    .faq-a-inner{font-size:14px;padding-right:8px;}
+  }
+
+
+  @media(max-width:640px){
+    .tool-card{padding:26px 22px;}
+    .tool-title{font-size:17px;gap:9px;}
+    .tool-icon{font-size:18px;}
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#" class="brand">Psicologia do Emagrecimento</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#teste-gratuito">Teste gratuito</a>
+      <a href="#metodo">O método</a>
+      <a href="#conteudo">Conteúdo</a>
+      <a href="#bonus">Bônus</a>
+      <a href="#garantia">Garantia</a>
+      <a href="#perguntas">Perguntas</a>
+      <a href="https://pay.kiwify.com.br/CHq8PTh" class="btn btn-ghost-dark" style="padding:10px 20px; font-size:13px;">Quero meu acesso</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="hero-banner"><span class="dot"></span>Oferta de lançamento · acesso imediato · garantia de 7 dias</div>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow hero-eyebrow">E-book · Edição Premium · Método RAEM</div>
+        <h1>Você não voltou a engordar<br class="brk">por falta de <em>força de vontade.</em></h1>
+        <p class="hero-sub">Descubra os padrões mentais e comportamentais que dificultam sua constância — e aprenda a construir hábitos mais sustentáveis sem depender apenas de força de vontade.</p>
+        <ul class="hero-list">
+          <li><span class="mark">→</span> Aprenda a lidar melhor com a fome emocional</li>
+          <li><span class="mark">→</span> Entenda e interrompa o ciclo do efeito sanfona</li>
+          <li><span class="mark">→</span> Construa novos padrões mentais e comportamentais</li>
+          <li><span class="mark">→</span> Desenvolva hábitos mais sustentáveis</li>
+        </ul>
+        <div class="hero-ctas">
+          <a href="https://pay.kiwify.com.br/CHq8PTh" class="btn btn-primary">Quero entender meus padrões <span class="btn-arrow">→</span></a>
+        </div>
+        <div class="hero-trust">🔒 Compra segura · entrega imediata por e-mail</div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-visual-inner">
+          <img src="https://psicologiadoemagrecimento.com/novo_site_assets/ebook.png" alt="Capa do ebook Psicologia do Emagrecimento">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-divider"></div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <div class="strip-item reveal">
+      <h4><span class="strip-icon" aria-hidden="true">🧭</span>Método prático</h4>
+      <p>Para transformar sua relação com a comida e o corpo, passo a passo.</p>
+    </div>
+    <div class="strip-item reveal">
+      <h4><span class="strip-icon" aria-hidden="true">⚡</span>Acesso imediato</h4>
+      <p>Receba o ebook agora mesmo, direto no seu e-mail.</p>
+    </div>
+    <div class="strip-item reveal">
+      <h4><span class="strip-icon" aria-hidden="true">🛡️</span>7 dias de garantia</h4>
+      <p>Se não gostar, devolvemos 100% do valor. Sem perguntas.</p>
+    </div>
+    <div class="strip-item reveal">
+      <h4><span class="strip-icon" aria-hidden="true">📘</span>Conteúdo aplicável</h4>
+      <p>Exercícios e ferramentas para resultados reais, não só teoria.</p>
+    </div>
+  </div>
+</section>
+
+<section class="leadmagnet" id="teste-gratuito">
+  <div class="wrap">
+    <div class="lead-box reveal">
+      <div class="lead-copy">
+        <div class="eyebrow">Teste gratuito</div>
+        <h2>Qual padrão psicológico mais influencia sua relação com a comida?</h2>
+        <p>Receba gratuitamente um teste rápido com os seis perfis alimentares e descubra por onde começar a construir mais consciência e constância.</p>
+        <div class="lead-mini">
+          <span>Leitura em 5 minutos</span>
+          <span>6 perfis psicológicos</span>
+          <span>Entrega imediata</span>
+        </div>
+      </div>
+      <form class="lead-form" id="leadForm">
+        <input type="email" id="leadEmail" name="email" placeholder="Seu melhor e-mail" autocomplete="email" required>
+        <input type="text" name="bot-field" id="botField" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <label class="lead-consent">
+          <input type="checkbox" id="leadConsent" required>
+          <span>Concordo em receber o teste, conteúdos educativos e ofertas por e-mail. Posso cancelar a inscrição a qualquer momento.</span>
+        </label>
+        <button type="submit" class="btn btn-primary" id="leadButton">Receber meu teste gratuito <span class="btn-arrow">→</span></button>
+        <div class="lead-status" id="leadStatus" aria-live="polite"></div>
+        <div class="lead-privacy">Seus dados são usados apenas para o envio do material e comunicações relacionadas.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="method" id="metodo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Método RAEM</div>
+      <h2>Um ciclo, não uma lista de dicas.</h2>
+      <p>Oito capítulos organizados em quatro fases que se retroalimentam — Reconhecer, Arquitetar, Executar, Manter — com uma ferramenta prática ao final de cada uma. Toque em cada fase.</p>
+    </div>
+    <div class="raem-wrap">
+      <div class="raem-diagram">
+        <svg viewBox="0 0 300 300">
+          <circle class="raem-path" cx="150" cy="150" r="122"></circle>
+          <circle class="raem-path-draw" cx="150" cy="150" r="122" transform="rotate(-90 150 150)"></circle>
+        </svg>
+        <div class="raem-node n1 active" data-phase="0"><span class="letter">R</span><span class="label">Reconhecer</span></div>
+        <div class="raem-node n2" data-phase="1"><span class="letter">A</span><span class="label">Arquitetar</span></div>
+        <div class="raem-node n3" data-phase="2"><span class="letter">E</span><span class="label">Executar</span></div>
+        <div class="raem-node n4" data-phase="3"><span class="letter">M</span><span class="label">Manter</span></div>
+        <div class="raem-center"><div class="k">O ciclo</div><div class="m">RAEM</div></div>
+      </div>
+      <div class="raem-detail">
+        <div id="raemContent">
+          <!-- injected by JS -->
+        </div>
+        <a href="https://pay.kiwify.com.br/CHq8PTh" class="btn btn-primary" style="margin-top:30px;">Quero começar agora <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="found" id="conteudo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Fundamentação</div>
+      <h2>Baseado em conceitos usados na mudança de hábitos</h2>
+    </div>
+    <div class="found-grid reveal">
+      <div class="found-card">
+        <div class="n">01</div>
+        <h4>Psicologia comportamental</h4>
+        <p>Para entender padrões, gatilhos e recompensas que influenciam sua relação com a comida.</p>
+      </div>
+      <div class="found-card">
+        <div class="n">02</div>
+        <h4>Formação de hábitos</h4>
+        <p>Para trocar ciclos de restrição, exagero e culpa por ações menores, repetíveis e sustentáveis.</p>
+      </div>
+      <div class="found-card">
+        <div class="n">03</div>
+        <h4>Fome emocional e recompensa</h4>
+        <p>Para compreender quando o cérebro busca comida como alívio rápido e diferenciar fome física, emoção e impulso automático.</p>
+      </div>
+    </div>
+    <div class="found-note reveal"><strong>Aviso importante:</strong> este ebook é educativo. Ele não substitui acompanhamento médico, nutricional ou psicológico, especialmente em casos de transtornos alimentares ou compulsão grave.</div>
+  </div>
+</section>
+
+<section id="autora">
+  <div class="wrap author-grid">
+    <div class="author-img-wrap reveal">
+      <img src="https://psicologiadoemagrecimento.com/novo_site_assets/autor.png" alt="Criadora do método RAEM">
+    </div>
+    <div class="author-copy reveal">
+      <div class="eyebrow">De onde vem o método</div>
+      <h2>Ciência comportamental, não modismo.</h2>
+      <p>O método RAEM organiza conceitos de psicologia comportamental, formação de hábitos e tomada de decisão em um processo claro e aplicável à relação com a comida. A proposta é transformar teoria em ações pequenas, repetíveis e mais fáceis de sustentar no dia a dia.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testi">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Relatos de leitores</div>
+      <h2>Uma abordagem que faz sentido no dia a dia</h2>
+    </div>
+    <div class="testi-grid reveal">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Eu já tinha tentado várias dietas e achava que me faltava disciplina. O ebook me ajudou a entender melhor meus padrões e a agir com mais consciência."</p>
+        <div class="testi-who">Mariana, 34 anos</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"O capítulo sobre os sabotadores mentais descreveu situações que eu vivia. Hoje consigo retomar a rotina com muito menos culpa."</p>
+        <div class="testi-who">Ricardo, 42 anos</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Passei a perceber melhor a diferença entre fome, ansiedade e impulso. Isso tornou minhas escolhas mais conscientes."</p>
+        <div class="testi-who">Fernanda, 29 anos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shift">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">A virada</div>
+      <h2>Antes e depois da Psicologia do Emagrecimento</h2>
+    </div>
+    <div class="shift-grid reveal">
+      <div class="shift-col shift-before">
+        <h3>Antes</h3>
+        <ul>
+          <li><span class="shift-mark">✕</span>Dietas que começam e terminam rápido</li>
+          <li><span class="shift-mark">✕</span>Culpa depois de comer</li>
+          <li><span class="shift-mark">✕</span>Efeito sanfona constante</li>
+          <li><span class="shift-mark">✕</span>Impulsos alimentares ligados às emoções</li>
+        </ul>
+      </div>
+      <div class="shift-col shift-after">
+        <h3>Depois</h3>
+        <ul>
+          <li><span class="shift-mark">✓</span>Mais consciência nas escolhas</li>
+          <li><span class="shift-mark">✓</span>Hábitos sustentáveis</li>
+          <li><span class="shift-mark">✓</span>Mais constância na rotina</li>
+          <li><span class="shift-mark">✓</span>Consciência alimentar sem culpa extrema</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fit">
+  <div class="wrap">
+    <div class="fit-grid">
+      <div class="fit-col fit-yes reveal">
+        <div class="eyebrow">Para quem é</div>
+        <h3>Este ebook é para você se...</h3>
+        <ul>
+          <li><span class="arrow">→</span>Você vive recomeçando dietas toda segunda-feira</li>
+          <li><span class="arrow">→</span>Você desconta emoções na comida</li>
+          <li><span class="arrow">→</span>Você emagrece e volta a engordar</li>
+          <li><span class="arrow">→</span>Você quer entender a raiz do problema</li>
+        </ul>
+      </div>
+      <div class="fit-col fit-no reveal">
+        <div class="eyebrow">Não é para você se</div>
+        <h3>Este ebook NÃO é para você se...</h3>
+        <ul>
+          <li><span class="arrow">✕</span>Procura fórmula mágica</li>
+          <li><span class="arrow">✕</span>Não pretende mudar hábitos</li>
+          <li><span class="arrow">✕</span>Busca apenas uma dieta pronta ou cardápio restritivo</li>
+          <li><span class="arrow">✕</span>Quer resultado sem aplicar nada no dia a dia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fit-cta reveal">
+      <a href="https://pay.kiwify.com.br/CHq8PTh" class="btn btn-primary">Sim, esse ebook é para mim <span class="btn-arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="bonus">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Ferramentas inclusas</div>
+      <h2>Dentro do ebook, você também encontra</h2>
+      <p>Além dos 8 capítulos, três ferramentas práticas vêm junto para você aplicar o método no dia a dia, sem precisar criar nada do zero.</p>
+    </div>
+    <div class="tools-grid reveal">
+      <div class="tool-card">
+        <h4 class="tool-title"><span class="tool-icon" aria-hidden="true">✅</span>Checklist Anti-Compulsão</h4>
+        <p>5 perguntas para usar antes de qualquer impulso alimentar, identificando se é vulnerabilidade emocional acumulada ou fome física real.</p>
+      </div>
+      <div class="tool-card">
+        <h4 class="tool-title"><span class="tool-icon" aria-hidden="true">📅</span>Plano de 30 Dias</h4>
+        <p>Um roteiro semana a semana — fundações, aprofundamento, integração e revisão — para instalar o método na prática.</p>
+      </div>
+      <div class="tool-card">
+        <h4 class="tool-title"><span class="tool-icon" aria-hidden="true">📊</span>Score Semanal RAEM</h4>
+        <p>Uma tabela de acompanhamento para visualizar sua consistência a cada semana e ver a tendência subir ao longo do plano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bridge">
+  <div class="wrap">
+    <div class="bridge-box reveal">
+      <div class="eyebrow">Um passo diferente</div>
+      <h2>Você não precisa recomeçar com mais rigidez. Precisa entender o padrão que faz você desistir.</h2>
+      <p>O ebook transforma esse entendimento em ações práticas, sem promessas milagrosas e sem exigir perfeição.</p>
+    </div>
+  </div>
+</section>
+
+<section class="offer" id="garantia">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="justify-content:center; color:var(--clay-light);">Resumo da oferta</div>
+      <h2 style="color:var(--bone);">Veja tudo que você recebe hoje</h2>
+    </div>
+    <div class="offer-box reveal">
+      <div class="offer-line"><span class="name">Ebook completo — 8 capítulos + Método RAEM</span><span class="val">R$ 67</span></div>
+      <div class="offer-line"><span class="name">Checklist Anti-Compulsão</span><span class="val">R$ 19</span></div>
+      <div class="offer-line"><span class="name">Plano de 30 Dias estruturado</span><span class="val">R$ 19</span></div>
+      <div class="offer-line" style="border-bottom:none;"><span class="name">Score Semanal RAEM + exercícios</span><span class="val">R$ 11</span></div>
+      <div class="offer-total-row">
+        <span class="offer-was">De R$ 116</span>
+        <div class="offer-price-block">
+          <div class="offer-today">Oferta de lançamento hoje</div>
+          <div class="offer-price">R$ 49,90</div>
+          <div class="offer-install">ou 3× de R$ 16,63</div>
+        </div>
+      </div>
+      <div class="offer-cta">
+        <a href="https://pay.kiwify.com.br/CHq8PTh" class="btn btn-primary">Garantir meu ebook agora <span class="btn-arrow">→</span></a>
+      </div>
+      <div class="offer-badges">
+        <span>🔒 Pagamento seguro</span>
+        <span>📥 Entrega imediata</span>
+        <span>🛡 Garantia 7 dias</span>
+        <span>💳 Pix e cartão</span>
+      </div>
+    </div>
+    <div class="offer-disclaimer reveal"><strong style="color:var(--bone);">Expectativa correta:</strong> este ebook não promete emagrecimento milagroso. Ele foi criado para ajudar você a entender e mudar padrões mentais que frequentemente sabotam os resultados físicos. É conteúdo educativo e prático, não tratamento médico ou psicológico.</div>
+  </div>
+</section>
+
+<section id="perguntas">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Dúvidas</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+
+    <div class="faq-list reveal" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>O ebook é uma dieta?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Não. Ele trabalha a parte mental e comportamental do emagrecimento: fome emocional, autossabotagem, hábitos e constância.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Recebo na hora?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Sim. Após a confirmação do pagamento, o acesso é enviado pela Kiwify para o seu e-mail.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Funciona para quem vive no efeito sanfona?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">O conteúdo foi feito para quem começa, para, se culpa e recomeça. A proposta é trabalhar os padrões comportamentais por trás desse ciclo.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Tem garantia?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Sim. Você conta com 7 dias de garantia. Se o conteúdo não fizer sentido para você, basta solicitar o reembolso dentro desse prazo.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Substitui acompanhamento psicológico?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Não. O ebook é educativo e não substitui terapia, avaliação médica, nutricional ou acompanhamento profissional individual.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>É curso ou ebook?</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">É um ebook digital com conteúdo direto, exercícios e materiais práticos. O acesso é liberado após a compra.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap final-inner">
+    <h2>Você quer continuar repetindo o ciclo — ou entender a raiz do problema hoje?</h2>
+    <div class="cta-row">
+      <a href="https://pay.kiwify.com.br/CHq8PTh" class="btn btn-primary">Quero entender a raiz <span class="btn-arrow">→</span></a>
+    </div>
+    <div class="final-sub">🔒 Seu acesso é entregue pela Kiwify. Ambiente 100% seguro.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-brand">Psicologia do Emagrecimento</div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/psico.emagreciment/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://psicologiadoemagrecimento.com/politica-privacidade">Política de Privacidade</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 Psicologia do Emagrecimento. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    navToggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.textContent = '☰';
+  }));
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // RAEM method draw-in
+  const methodSection = document.querySelector('.method');
+  const methodIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { methodSection.classList.add('is-active'); methodIo.unobserve(e.target); } });
+  }, { threshold: 0.25 });
+  methodIo.observe(methodSection);
+
+  // RAEM interactive content
+  const raemData = [
+    {
+      tag: 'Fase R · Reconhecer',
+      title: 'Por que você sabota seus resultados',
+      body: 'O loop do hábito, os dois sistemas de decisão do cérebro e os seis sabotadores mentais que operam contra você sem você perceber.'
+    },
+    {
+      tag: 'Fase A · Arquitetar',
+      title: 'O sistema que sustenta a mudança',
+      body: 'Hábitos mínimos viáveis, design de ambiente e planos Se-Então — a engenharia por trás de hábitos que não dependem de força de vontade.'
+    },
+    {
+      tag: 'Fase E · Executar',
+      title: 'Checklist Anti-Compulsão',
+      body: 'Cinco perguntas para usar antes de qualquer impulso alimentar, direto do Capítulo 5, para aplicar no momento exato em que mais precisa.'
+    },
+    {
+      tag: 'Fase M · Manter',
+      title: 'Plano de 30 dias e Score Semanal',
+      body: 'Um roteiro estruturado semana a semana, com uma tabela própria para acompanhar sua consistência e ver a tendência subir.'
+    }
+  ];
+  const raemContent = document.getElementById('raemContent');
+  const raemNodes = document.querySelectorAll('.raem-node');
+  function renderRaem(i){
+    const d = raemData[i];
+    raemContent.innerHTML = `<div class="raem-phase-tag">${d.tag}</div><h3>${d.title}</h3><p>${d.body}</p>`;
+    raemNodes.forEach(n => n.classList.remove('active'));
+    raemNodes[i].classList.add('active');
+  }
+  raemNodes.forEach((node, i) => node.addEventListener('click', () => renderRaem(i)));
+  renderRaem(0);
+
+
+  // lead magnet
+  const leadForm = document.getElementById('leadForm');
+  if (leadForm){
+    const leadButton = document.getElementById('leadButton');
+    const leadStatus = document.getElementById('leadStatus');
+    leadForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const email = document.getElementById('leadEmail').value.trim();
+      const consentimento = document.getElementById('leadConsent').checked;
+      const botField = document.getElementById('botField').value;
+      leadStatus.className = 'lead-status';
+      leadStatus.textContent = 'Preparando seu teste...';
+      leadButton.disabled = true;
+      try{
+        const response = await fetch('/.netlify/functions/capturar-lead', {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({email, consentimento, 'bot-field':botField, origem:'site-psicologia-emagrecimento'})
+        });
+        const raw = await response.text();
+        let data;
+        try{ data = JSON.parse(raw); }catch{ throw new Error('A automação não retornou uma resposta válida.'); }
+        if(!response.ok || !data.ok) throw new Error(data.detail || data.error || 'Não foi possível concluir o cadastro.');
+        leadStatus.className = 'lead-status success';
+        leadStatus.innerHTML = 'Teste enviado! <a href="/downloads/teste-perfil-psicologico-alimentar.pdf" download style="text-decoration:underline">Baixar agora</a>';
+        leadButton.textContent = 'Teste enviado';
+        leadForm.reset();
+      }catch(error){
+        leadStatus.className = 'lead-status error';
+        leadStatus.textContent = error.message || 'Não foi possível concluir o cadastro.';
+        leadButton.disabled = false;
+        leadButton.textContent = 'Receber meu teste gratuito';
+      }
+    });
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o => { o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null; });
+      if (!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
