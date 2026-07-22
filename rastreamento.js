@@ -34,6 +34,15 @@
       currency: "BRL",
       value: 147,
       checkout_provider: "kiwify",
+      cta_location: link.dataset.cta || "nao_identificado",
     });
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "begin_checkout", {
+        currency: "BRL",
+        value: 147,
+        cta_location: link.dataset.cta || "nao_identificado",
+        items: [{ item_name: "Método RAEM", price: 147, quantity: 1 }],
+      });
+    }
   });
 })();

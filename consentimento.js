@@ -43,23 +43,29 @@
     if (saved || document.getElementById("privacy-banner")) return;
     const style = document.createElement("style");
     style.textContent =
-      "#privacy-banner{position:fixed;z-index:9999;left:18px;right:18px;bottom:18px;max-width:760px;margin:auto;background:#102b26;color:#f3ecdf;border:1px solid #c49a3866;border-radius:10px;padding:18px;box-shadow:0 14px 45px #0009;font:14px/1.5 Inter,Arial,sans-serif}#privacy-banner p{margin:0 0 14px}#privacy-banner a{color:#e7c565;text-decoration:underline}#privacy-banner .actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}#privacy-banner button{cursor:pointer;border:1px solid #c49a38;border-radius:4px;padding:10px 16px;color:#f3ecdf;background:transparent;font-weight:700}#privacy-banner .accept{background:#e16643;border-color:#e16643}@media(max-width:560px){#privacy-banner{left:10px;right:10px;bottom:78px}#privacy-banner .actions button{flex:1}}";
+      "#privacy-banner{position:fixed;z-index:9999;right:16px;bottom:16px;width:min(354px,calc(100vw - 32px));background:repeating-linear-gradient(118deg,transparent 0 22px,#efd27d0a 23px,transparent 24px 46px),linear-gradient(145deg,#14382f,#071f1a);color:#fffaf0;border:1px solid #d7b45e;border-radius:9px;padding:12px 13px;box-shadow:0 18px 42px #0008,inset 0 1px #fff2;font:11px/1.4 Inter,Arial,sans-serif}#privacy-banner:before{content:'';position:absolute;inset:4px;pointer-events:none;border:1px solid #e4c97720;border-radius:5px}#privacy-banner p{position:relative;margin:0 0 8px;padding-right:2px}#privacy-banner strong{font-family:Georgia,serif;font-size:14px;color:#fff}#privacy-banner a{color:#efd27d;text-decoration:underline}#privacy-banner .actions{position:relative;display:flex;gap:7px;justify-content:flex-end}#privacy-banner button{cursor:pointer;min-height:36px;border:1px solid #76988c;border-radius:4px;padding:6px 9px;color:#fffaf0;background:#ffffff08;font-size:10px;font-weight:750}#privacy-banner .accept{color:#122e26;background:linear-gradient(180deg,#f0d98d,#c79b42);border-color:#f4df9e;box-shadow:inset 0 1px #fff8,0 6px 14px #0004}@media(max-width:560px){#privacy-banner{left:8px;right:8px;bottom:8px;width:auto;padding:11px}#privacy-banner p{margin-bottom:7px;font-size:11px}#privacy-banner strong{font-size:14px}#privacy-banner .actions{gap:6px}#privacy-banner button{flex:1;min-height:42px;padding:6px;font-size:10px}}";
     document.head.appendChild(style);
     const el = document.createElement("aside");
     el.id = "privacy-banner";
-    el.setAttribute("aria-label", "Preferências de privacidade");
+    el.setAttribute("role", "region");
+    el.setAttribute("aria-labelledby", "privacy-title");
+    el.setAttribute("aria-describedby", "privacy-description");
     el.innerHTML =
-      '<p><strong>Você escolhe sobre seus dados.</strong><br>Usamos cookies opcionais para entender visitas e medir campanhas. Os essenciais continuam funcionando. <a href="privacidade.html">Saiba mais</a>.</p><div class="actions"><button type="button" data-choice="rejected">Usar só o essencial</button><button class="accept" type="button" data-choice="accepted">Aceitar e continuar</button></div>';
+      '<p id="privacy-description"><strong id="privacy-title">Sua privacidade.</strong> Cookies opcionais ajudam a medir o uso. <a href="privacidade.html">Detalhes</a>.</p><div class="actions"><button type="button" data-choice="rejected">Só essenciais</button><button class="accept" type="button" data-choice="accepted">Aceitar opcionais</button></div>';
     document.body.appendChild(el);
+    document.documentElement.classList.add("privacy-open");
     el.addEventListener("click", (e) => {
       const choice = e.target.dataset.choice;
       if (!choice) return;
       localStorage.setItem(key, choice);
       apply(choice);
+      document.documentElement.classList.remove("privacy-open");
       el.remove();
     });
   }
-  document.readyState === "loading"
-    ? document.addEventListener("DOMContentLoaded", mount)
-    : mount();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", mount);
+  } else {
+    mount();
+  }
 })();

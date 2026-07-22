@@ -25,3 +25,27 @@
   );
   videos.forEach((video) => observer.observe(video));
 })();
+
+(function () {
+  const buy = document.querySelector(".mobile-buy");
+  const offer = document.querySelector(".offer");
+  const faq = document.querySelector(".faq-section");
+  const footer = document.querySelector(".footer");
+  if (!buy || !offer || !("IntersectionObserver" in window)) return;
+
+  const visible = new Set();
+  const sync = () => buy.classList.toggle("is-hidden", visible.size > 0);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) visible.add(entry.target);
+        else visible.delete(entry.target);
+      });
+      sync();
+    },
+    { threshold: 0.08, rootMargin: "-8% 0px -8% 0px" },
+  );
+  observer.observe(offer);
+  if (faq) observer.observe(faq);
+  if (footer) observer.observe(footer);
+})();
