@@ -8262,3 +8262,25 @@ blockquote,
     padding-inline: 14px !important;
   }
 }
+
+/* Contraste definitivo da prova e das garantias no hero. */
+.hero .trust-row,
+.hero .trust-row a,
+.hero .trust-row small,
+.hero .trust-row > span,
+.hero .trust-row .stars {
+  color: #fff !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-text-stroke: .3px rgba(0, 0, 0, .82);
+  text-shadow:
+    -1px 0 rgba(0, 0, 0, .72),
+    0 1px rgba(0, 0, 0, .72),
+    1px 0 rgba(0, 0, 0, .72),
+    0 -1px rgba(0, 0, 0, .72),
+    0 2px 4px rgba(0, 0, 0, .55) !important;
+}
+
+.hero .trust-row .stars {
+  font-weight: 800;
+}
