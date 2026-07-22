@@ -46,3 +46,65 @@
     }
   });
 })();
+
+// GA4: rastreamento de rolagem e de visualização de seções.
+// Mostra onde as pessoas param de rolar e quais seções elas realmente veem.
+// Respeita o consentimento: o gtag envia sinais sem cookies quando negado.
+(function () {
+  function track(name, params) {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", name, params);
+    } else {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({ event: name }, params));
+    }
+  }
+
+  // Seções-chave do funil (id no HTML -> nome legível no relatório)
+  const secoes = [
+    ["inicio", "hero"],
+    ["conteudo", "o_que_recebe"],
+    ["metodo", "metodo"],
+    ["depoimentos", "depoimentos"],
+    ["oferta", "oferta"],
+  ];
+  if ("IntersectionObserver" in window) {
+    const vistas = new Set();
+    const obs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && !vistas.has(e.target.id)) {
+            vistas.add(e.target.id);
+            const par = secoes.find(function (s) { return s[0] === e.target.id; });
+            track("view_section", { section: par ? par[1] : e.target.id });
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
+    secoes.forEach(function (s) {
+      const el = document.getElementById(s[0]);
+      if (el) obs.observe(el);
+    });
+  }
+
+  // Profundidade de rolagem: 25% / 50% / 75% / 100%
+  const marcos = [25, 50, 75, 100];
+  const disparados = new Set();
+  function aoRolar() {
+    const doc = document.documentElement;
+    const alturaRolavel = doc.scrollHeight - window.innerHeight;
+    if (alturaRolavel <= 0) return;
+    const pct = ((doc.scrollTop || window.pageYOffset) / alturaRolavel) * 100;
+    marcos.forEach(function (m) {
+      if (pct >= m && !disparados.has(m)) {
+        disparados.add(m);
+        track("scroll_depth", { percent: m });
+      }
+    });
+    if (disparados.size === marcos.length) {
+      window.removeEventListener("scroll", aoRolar);
+    }
+  }
+  window.addEventListener("scroll", aoRolar, { passive: true });
+})();

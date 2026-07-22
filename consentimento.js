@@ -6,6 +6,7 @@
   }
   window.gtag = window.gtag || gtag;
   const googleAdsId = "AW-18269319435";
+  const ga4Id = "G-ZPBTP73MKP";
   let googleLoaded = false;
   function loadGoogle() {
     if (googleLoaded) return;
@@ -14,10 +15,11 @@
     script.async = true;
     script.src =
       "https://www.googletagmanager.com/gtag/js?id=" +
-      encodeURIComponent(googleAdsId);
+      encodeURIComponent(ga4Id);
     document.head.appendChild(script);
     gtag("js", new Date());
     gtag("config", googleAdsId);
+    gtag("config", ga4Id);
   }
   // Consentimento avançado (Consent Mode v2): o padrão continua "negado",
   // mas a tag do Google é carregada sempre. Quando negado, ela envia apenas
