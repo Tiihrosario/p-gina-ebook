@@ -7616,3 +7616,381 @@ blockquote,
     letter-spacing: -.015em;
   }
 }
+
+/* Estabilidade mobile 2026-07-22: uma única camada final para impedir que
+   regras históricas de desktop voltem a vazar para telas estreitas. */
+.cycle-native__icon,
+.cycle-native__dot svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 900px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  main,
+  main > section,
+  .hero-copy,
+  .showcase-stage,
+  .cycle-native__inner,
+  .author-card,
+  .author-profile,
+  .author-copy,
+  .offer-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* O botão flutuante cobria títulos, cards e controles em navegadores internos. */
+  .mobile-buy {
+    display: none !important;
+  }
+
+  .hero {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 92px 18px 42px !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    background-image:
+      linear-gradient(180deg, rgba(255, 248, 236, .98) 0%, rgba(255, 248, 236, .95) 56%, rgba(255, 248, 236, .77) 70%, rgba(255, 248, 236, .16) 100%),
+      url("./hero-opcao-c-fundo.webp") !important;
+    background-position: 58% center !important;
+  }
+
+  .hero-copy {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .hero h1 {
+    margin-bottom: 20px !important;
+    font-size: clamp(39px, 11vw, 51px) !important;
+    line-height: 1.01 !important;
+  }
+
+  .hero-lead {
+    max-width: 38rem !important;
+    color: #173c34 !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    font-weight: 520 !important;
+    line-height: 1.62 !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .9) !important;
+  }
+
+  .hero-package {
+    width: 100% !important;
+    margin-top: 22px !important;
+    padding: 17px 16px !important;
+    gap: 14px !important;
+  }
+
+  .hero-package > div:first-child {
+    min-width: 0 !important;
+  }
+
+  .hero-package > div:last-child {
+    flex: 0 0 auto !important;
+  }
+
+  .hero .trust-row,
+  .hero .trust-row > span,
+  .hero .rating-link small {
+    color: #24473e !important;
+    opacity: 1 !important;
+  }
+
+  .hero-visual {
+    width: min(112%, 680px) !important;
+    max-width: none !important;
+    margin: 22px 0 0 -6% !important;
+    transform: none !important;
+  }
+
+  /* A demonstração passa a ter um painel claro real, em vez de depender de
+     uma faixa de fundo que terminava no meio do título. */
+  .product-story {
+    padding: 48px 14px !important;
+  }
+
+  .product-story .showcase-stage {
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 18px 14px 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    background: transparent !important;
+  }
+
+  .product-story .showcase-stage::before,
+  .product-story .showcase-stage::after {
+    display: none !important;
+  }
+
+  .product-story .showcase-copy {
+    order: 1 !important;
+    width: 100% !important;
+    margin: 0 0 28px !important;
+    padding: 28px 22px 24px !important;
+    color: #153b32 !important;
+    background:
+      repeating-linear-gradient(118deg, transparent 0 18px, rgba(73, 53, 30, .026) 19px 20px),
+      linear-gradient(145deg, #fffaf0, #f1e5d1) !important;
+    border: 1px solid rgba(198, 161, 92, .62) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 18px 38px rgba(0, 0, 0, .22) !important;
+  }
+
+  .product-story .showcase-copy > span {
+    color: #a85a37 !important;
+  }
+
+  .product-story .showcase-copy h3 {
+    max-width: none !important;
+    color: #123a31 !important;
+    font-size: clamp(38px, 10.8vw, 52px) !important;
+    line-height: 1 !important;
+    opacity: 1 !important;
+  }
+
+  .product-story .showcase-copy p {
+    color: #405b53 !important;
+    font-size: 15px !important;
+    line-height: 1.62 !important;
+  }
+
+  .product-story .showcase-phone {
+    order: 2 !important;
+    width: min(72vw, 288px) !important;
+    margin: 0 auto 26px !important;
+    transform: none !important;
+  }
+
+  .product-story .floating-features {
+    order: 3 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .product-story > .tools-grid {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: 620px !important;
+    margin: 24px auto 0 !important;
+    transform: none !important;
+  }
+
+  .cycle-native {
+    width: 100% !important;
+    padding: 42px 16px 30px !important;
+  }
+
+  .cycle-native__top,
+  .cycle-native__cards {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .cycle-native__cards {
+    gap: 16px !important;
+  }
+
+  .cycle-native__card {
+    min-height: 0 !important;
+    padding: 62px 22px 26px !important;
+  }
+
+  .cycle-native__icon-wrap {
+    width: 66px !important;
+    height: 66px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .cycle-native__icon {
+    width: 36px !important;
+    height: 36px !important;
+    color: #b27b2d !important;
+  }
+
+  .cycle-native__card p {
+    font-size: clamp(27px, 7.8vw, 35px) !important;
+    line-height: 1.24 !important;
+  }
+
+  .cycle-native__flow {
+    margin-top: 30px !important;
+    padding-top: 18px !important;
+  }
+
+  .cycle-native__steps {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .cycle-native__step {
+    grid-template-columns: 62px minmax(0, 1fr) !important;
+  }
+
+  .cycle-native__dot {
+    width: 58px !important;
+    height: 58px !important;
+    margin: 0 !important;
+    color: #e7bf68 !important;
+  }
+
+  .cycle-native__dot svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .cycle-native__step:not(:last-child)::after {
+    top: 46px !important;
+    bottom: -4px !important;
+    left: 28px !important;
+    width: 2px !important;
+    height: auto !important;
+  }
+
+  .cycle-native__step strong {
+    padding: 18px 0 !important;
+    font-size: 31px !important;
+  }
+
+  /* O quadro do autor nunca mantém as duas colunas de desktop no celular. */
+  .author-section {
+    width: 100% !important;
+    padding: 62px 14px 68px !important;
+    overflow: hidden !important;
+  }
+
+  .author-card {
+    width: 100% !important;
+    min-height: 0 !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 32px !important;
+    padding: 28px 21px 30px !important;
+    overflow: hidden !important;
+  }
+
+  .author-card::before {
+    inset: 10px !important;
+  }
+
+  .author-profile {
+    width: 100% !important;
+    gap: 22px !important;
+  }
+
+  .author-profile .author-photo-wrap {
+    width: calc(100% - 18px) !important;
+    max-width: 350px !important;
+    min-height: 0 !important;
+    margin: 4px auto 0 !important;
+    aspect-ratio: 4 / 4.65 !important;
+  }
+
+  .author-profile .author-identity {
+    width: 100% !important;
+    padding-top: 20px !important;
+    text-align: left !important;
+  }
+
+  .author-identity::after {
+    left: 0 !important;
+    transform: none !important;
+  }
+
+  .author-card .author-identity h2 {
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+    font-size: clamp(43px, 13vw, 58px) !important;
+    overflow-wrap: anywhere;
+  }
+
+  .author-card .author-identity .author-role {
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+    font-size: 18px !important;
+  }
+
+  .author-copy,
+  .author-copy .authority-evidence,
+  .author-closing {
+    width: 100% !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .author-copy .author-pillars {
+    justify-content: flex-start !important;
+  }
+
+  .authority-evidence article {
+    width: 100% !important;
+    grid-template-columns: 31px minmax(0, 1fr) !important;
+  }
+
+  .authority-evidence strong,
+  .author-card .author-copy .authority-evidence p {
+    grid-column: 2 !important;
+  }
+
+  .author-card .author-copy .authority-evidence p {
+    grid-row: auto !important;
+  }
+
+  .author-closing {
+    gap: 17px !important;
+  }
+
+  .objection-grid,
+  .fit-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .objection-grid article,
+  .fit-card,
+  .offer-card,
+  .faq-list details {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-package {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .hero-package > div:last-child {
+    width: 100% !important;
+    padding: 13px 0 0 !important;
+    border-top: 1px solid rgba(164, 119, 43, .28) !important;
+    border-left: 0 !important;
+    text-align: left !important;
+  }
+
+  .primary-cta,
+  .product-story .showcase-copy a,
+  .author-cta,
+  .reviews-actions a {
+    width: 100% !important;
+    padding-inline: 14px !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  .author-seal {
+    right: -10px !important;
+    width: 84px !important;
+  }
+}
