@@ -4593,7 +4593,7 @@
 
 .hero {
         background-color: #fcf5e8 !important;
-        background-image: url("/hero-opcao-c-fundo.webp") !important;
+        background-image: url("./hero-opcao-c-fundo.webp") !important;
         background-position: center !important;
         background-size: cover !important;
         grid-template-columns: minmax(0, 44%) minmax(0, 56%) !important;
@@ -4690,7 +4690,7 @@
         .hero {
           background-image:
             linear-gradient(#fff6eae8 0 53%, #fff6ea33 70%, transparent 100%),
-            url("/hero-opcao-c-fundo.webp") !important;
+            url("./hero-opcao-c-fundo.webp") !important;
           background-position: 58% center !important;
           padding-inline: 18px !important;
         }
@@ -4741,7 +4741,7 @@
         padding-bottom: 34px;
         background-image:
           linear-gradient(180deg, rgba(3, 24, 20, 0.58), rgba(3, 18, 15, 0.94)),
-          url("/paisagem-rodape.webp") !important;
+          url("./paisagem-rodape.webp") !important;
         background-size: cover !important;
         background-position: center 55% !important;
         text-shadow: 0 2px 14px rgba(0, 0, 0, 0.72);
@@ -7662,7 +7662,7 @@ blockquote,
     grid-template-columns: minmax(0, 1fr) !important;
     background-image:
       linear-gradient(180deg, rgba(255, 248, 236, .98) 0%, rgba(255, 248, 236, .95) 56%, rgba(255, 248, 236, .77) 70%, rgba(255, 248, 236, .16) 100%),
-      url("/hero-opcao-c-fundo.webp") !important;
+      url("./hero-opcao-c-fundo.webp") !important;
     background-position: 58% center !important;
   }
 
@@ -8199,5 +8199,49 @@ blockquote,
   .product-story .feature-glass > span {
     width: 54px !important;
     height: 54px !important;
+  }
+}
+
+/* Ajuste final de alinhamento mobile — oferta e cabeçalho do FAQ. */
+@media (max-width: 900px) {
+  .offer {
+    padding-inline: 16px !important;
+  }
+
+  .offer-card {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .faq-section > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .faq-section > div:first-child > .eyebrow,
+  .faq-section > div:first-child > h2,
+  .faq-section > div:first-child > .faq-intro {
+    margin: 0 !important;
+  }
+
+  .faq-section > div:first-child > h2 {
+    max-width: 12ch;
+    line-height: 1.04 !important;
+  }
+
+  .faq-intro {
+    max-width: 34ch;
+    color: rgba(243, 236, 223, .78) !important;
+    font-size: 15px !important;
+    line-height: 1.58 !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .offer {
+    padding-inline: 14px !important;
   }
 }
