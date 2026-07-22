@@ -19,6 +19,12 @@
     gtag("js", new Date());
     gtag("config", googleAdsId);
   }
+  // Consentimento avançado (Consent Mode v2): o padrão continua "negado",
+  // mas a tag do Google é carregada sempre. Quando negado, ela envia apenas
+  // pings anônimos (sem cookies) que permitem ao Google modelar as conversões
+  // de quem recusou, sem armazenar nada no navegador da pessoa.
+  gtag("set", "url_passthrough", true);
+  gtag("set", "ads_data_redaction", true);
   gtag("consent", "default", {
     ad_storage: "denied",
     analytics_storage: "denied",
@@ -36,9 +42,11 @@
       ad_personalization: granted,
     });
     document.documentElement.dataset.consent = choice;
-    if (choice === "accepted") loadGoogle();
   }
   if (saved) apply(saved);
+  // Modo avançado: carrega a tag do Google já no início, com o consentimento
+  // padrão negado. Sem isso, quem recusa (ou ignora) o banner ficava invisível.
+  loadGoogle();
   function mount() {
     if (saved || document.getElementById("privacy-banner")) return;
     const style = document.createElement("style");

@@ -8389,3 +8389,309 @@ blockquote,
     max-width: none;
   }
 }
+
+/* Sistema cromático final — funções consistentes em todo o site. */
+:root {
+  --petrol: #061714;
+  --petrol2: #0b2b25;
+  --cream: #fffaf0;
+  --paper: #f3ecdf;
+  --ink: #17362f;
+  --sage: #5d7069;
+
+  /* Dois dourados: principal em fundos claros e luminoso em fundos escuros. */
+  --gold: #b38734;
+  --gold-bright: #e4c578;
+
+  /* Coral fica reservado às ações de compra. */
+  --coral: #d96342;
+  --coral-hover: #bd4f31;
+
+  --text-dark: #17362f;
+  --text-dark-muted: #4f625c;
+  --text-light: #fffaf0;
+  --text-light-muted: #d7e1dd;
+}
+
+/* Dourado passa a identificar detalhes editoriais e ações secundárias. */
+.eyebrow,
+.section-number,
+.proof-label,
+.premium-stamp,
+.method-card > span,
+.tools-grid article > span,
+.offer-facts b,
+.price-box > span,
+.guarantee > strong,
+.inner-voice::before,
+.author-kicker {
+  color: var(--gold) !important;
+}
+
+.reviews-section .eyebrow,
+.faq-section .eyebrow,
+.cycle-native__eyebrow,
+.offer-card .eyebrow,
+.offer-card .inner-voice::before,
+.product-story > .tools-grid article > span,
+.footer a:hover {
+  color: var(--gold-bright) !important;
+}
+
+.header-cta,
+.reviews-actions > a:not(.reviews-buy) {
+  color: var(--gold-bright) !important;
+  background: transparent !important;
+  border-color: var(--gold-bright) !important;
+}
+
+.light-section .header-cta,
+.light-section .reviews-actions > a:not(.reviews-buy) {
+  color: var(--gold) !important;
+  border-color: var(--gold) !important;
+}
+
+/* Todos os caminhos que levam à compra usam o mesmo coral. */
+a[data-cta],
+.primary-cta,
+.method-conversion > a,
+.reviews-actions .reviews-buy,
+.author-cta,
+.mobile-buy {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  background: var(--coral) !important;
+  border-color: var(--coral) !important;
+  box-shadow:
+    0 13px 28px rgba(94, 39, 27, .24),
+    inset 0 1px rgba(255, 255, 255, .26) !important;
+}
+
+a[data-cta]:hover,
+.primary-cta:hover,
+.method-conversion > a:hover,
+.reviews-actions .reviews-buy:hover,
+.author-cta:hover,
+.mobile-buy:hover {
+  background: var(--coral-hover) !important;
+  border-color: var(--coral-hover) !important;
+}
+
+/* Contraste mínimo consistente nos fundos escuros. */
+.reviews-section h2,
+.reviews-grid blockquote p,
+.reviews-grid blockquote footer,
+.faq-section h2,
+.faq-list summary,
+.offer-card h2,
+.offer-card li,
+.offer-card .price-box,
+.product-story > .tools-grid h3,
+.cycle-native h2 {
+  color: var(--text-light) !important;
+}
+
+.reviews-context,
+.reviews-grid blockquote footer span,
+.faq-intro,
+.faq-list details p,
+.offer-card > .offer-copy > p,
+.offer-card .secure,
+.product-story > .tools-grid p,
+.cycle-native__response {
+  color: var(--text-light-muted) !important;
+  opacity: 1 !important;
+}
+
+/* Contraste consistente nos fundos claros. */
+.light-section h2,
+.light-section h3,
+.author-copy,
+.fit-section,
+.objection-grid h3,
+.objection-grid p {
+  color: var(--text-dark) !important;
+}
+
+.light-section > p,
+.author-bio,
+.author-note,
+.fit-heading > p,
+.fit-card li {
+  color: var(--text-dark-muted) !important;
+}
+
+/* Prova do hero: branco nítido, com sombra verde em vez do contorno preto pesado. */
+.hero .trust-row,
+.hero .trust-row a,
+.hero .trust-row small,
+.hero .trust-row > span,
+.hero .trust-row .stars {
+  color: #fff !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-text-stroke: .2px rgba(6, 35, 29, .72) !important;
+  text-shadow:
+    0 1px 2px rgba(3, 27, 22, .95),
+    0 0 8px rgba(3, 27, 22, .62) !important;
+}
+
+/* Bordas e medalhões compartilham apenas os dois dourados oficiais. */
+.raem-info-belt,
+.raem-info-belt__icon,
+.cycle-native__card,
+.offer-card,
+.author-card,
+.objection-grid article {
+  border-color: color-mix(in srgb, var(--gold) 58%, transparent) !important;
+}
+
+.raem-info-belt__item + .raem-info-belt__item::before {
+  background: color-mix(in srgb, var(--gold) 58%, transparent) !important;
+}
+
+.raem-info-belt__icon,
+.cycle-native__icon-wrap,
+.premium-stamp {
+  color: var(--gold-bright) !important;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold-bright) !important;
+  outline-offset: 3px;
+}
+
+/* Oferta — acabamento definitivo do título, painel de compra e CTA. */
+.offer-card .offer-copy > h2 {
+  color: var(--gold-bright) !important;
+  -webkit-text-fill-color: var(--gold-bright) !important;
+  text-shadow: 0 2px 18px rgba(228, 197, 120, .12);
+}
+
+.offer-card .price-box {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 48px 34px 34px !important;
+  border: 1px solid rgba(228, 197, 120, .58) !important;
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, .045), rgba(3, 21, 17, .18)),
+    repeating-linear-gradient(118deg, transparent 0 27px, rgba(228, 197, 120, .025) 28px 29px);
+  box-shadow:
+    0 22px 44px rgba(0, 0, 0, .24),
+    inset 0 1px 0 rgba(255, 255, 255, .1),
+    inset 0 0 0 7px rgba(228, 197, 120, .035) !important;
+}
+
+.offer-card .price-box::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  pointer-events: none;
+  border: 1px solid rgba(228, 197, 120, .13);
+  border-radius: 4px;
+}
+
+.offer-card .price-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+.offer-card .price-box > .primary-cta {
+  align-self: center;
+  width: min(100%, 440px) !important;
+  margin: 2px auto 0 !important;
+  padding-inline: 24px !important;
+  text-align: center !important;
+}
+
+.offer-card .price-box > .secure {
+  align-self: center;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .offer-card .price-box {
+    padding: 70px 22px 28px !important;
+  }
+
+  .offer-card .price-box > .primary-cta {
+    width: min(100%, 520px) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .offer-card .price-box {
+    padding: 66px 16px 24px !important;
+  }
+
+  .offer-card .price-box > .primary-cta {
+    padding-inline: 16px !important;
+  }
+}
+
+/* Correção definitiva: objeções com molduras independentes em qualquer tela. */
+.objection-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  border-top: 0 !important;
+}
+
+.objection-grid article,
+.objection-grid article:nth-child(odd),
+.objection-grid article:nth-child(2n),
+.objection-grid article:last-child {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 28px 26px 26px !important;
+  overflow: hidden !important;
+  background:
+    repeating-linear-gradient(118deg, transparent 0 18px, rgba(91, 64, 34, .028) 19px 20px),
+    linear-gradient(145deg, rgba(255, 251, 243, .99), rgba(244, 234, 216, .99)) !important;
+  border: 1px solid color-mix(in srgb, var(--gold) 58%, transparent) !important;
+  border-radius: 8px !important;
+  box-shadow:
+    0 16px 32px rgba(63, 45, 27, .12),
+    inset 0 1px 0 rgba(255, 255, 255, .92),
+    inset 4px 0 0 rgba(193, 116, 78, .66) !important;
+}
+
+.objection-grid article::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  pointer-events: none;
+  border: 1px solid rgba(162, 116, 50, .13);
+  border-radius: 4px;
+}
+
+.objection-grid h3,
+.objection-grid p {
+  position: relative;
+  z-index: 1;
+}
+
+/* O nome do autor fica claro dentro do quadro escuro, sem herdar títulos de seções claras. */
+.author-card .author-identity h2 {
+  color: #fffaf0 !important;
+  -webkit-text-fill-color: #fffaf0 !important;
+  opacity: 1 !important;
+  text-shadow:
+    0 2px 3px rgba(0, 0, 0, .72),
+    0 0 18px rgba(0, 0, 0, .38) !important;
+}
+
+@media (max-width: 900px) {
+  .objection-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .objection-grid article,
+  .objection-grid article:nth-child(odd),
+  .objection-grid article:nth-child(2n),
+  .objection-grid article:last-child {
+    padding: 26px 22px 24px !important;
+  }
+}
