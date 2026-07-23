@@ -450,7 +450,7 @@
       }
       .trust-row strong {
         color: var(--gold);
-        font: 34px Instrument Serif;
+        font: 34px "Cormorant Garamond", Georgia, serif;
       }
       .stars {
         color: var(--gold);
@@ -528,7 +528,7 @@
         border-left: 2px solid var(--gold);
         margin: 32px 0;
         padding-left: 24px;
-        font: italic 32px/1.3 Instrument Serif;
+        font: italic 32px/1.3 "Cormorant Garamond", Georgia, serif;
       }
       .cycle-section {
         background: #0b2420;
@@ -560,7 +560,7 @@
         display: block;
       }
       .cycle-item strong {
-        font: 36px Instrument Serif;
+        font: 36px "Cormorant Garamond", Georgia, serif;
       }
       .cycle-item b {
         color: var(--gold);
@@ -604,11 +604,11 @@
       }
       .method-card > span {
         color: var(--coral);
-        font: 76px Instrument Serif;
+        font: 76px "Cormorant Garamond", Georgia, serif;
       }
       .method-card h3 {
         margin: 14px 0;
-        font: 32px Instrument Serif;
+        font: 32px "Cormorant Garamond", Georgia, serif;
       }
       .method-card p {
         color: #43504b;
@@ -663,13 +663,13 @@
         letter-spacing: 0.15em;
         color: var(--gold);
         margin-bottom: 40px;
-        font: 30px Instrument Serif;
+        font: 30px "Cormorant Garamond", Georgia, serif;
       }
       .app-logo small {
         letter-spacing: 0.08em;
         color: #fff7;
         margin-top: 5px;
-        font: 9px Inter;
+        font: 9px Manrope;
         display: block;
       }
       .app-row {
@@ -701,7 +701,7 @@
       .book-panel span,
       .book-panel strong {
         letter-spacing: 0.1em;
-        font-family: Instrument Serif;
+        font-family: "Cormorant Garamond", Georgia, serif;
         display: block;
       }
       .book-panel span {
@@ -732,7 +732,7 @@
       }
       .tools-grid h3 {
         margin: 18px 0 10px;
-        font: 29px Instrument Serif;
+        font: 29px "Cormorant Garamond", Georgia, serif;
       }
       .tools-grid p {
         color: #f3ecdf99;
@@ -754,7 +754,7 @@
       }
       .benefit-list p {
         margin: 0;
-        font: clamp(25px, 3vw, 42px) Instrument Serif;
+        font: clamp(25px, 3vw, 42px) "Cormorant Garamond", Georgia, serif;
       }
       .reviews-section {
         background: #091d1a;
@@ -775,7 +775,7 @@
         display: flex;
       }
       .rating-big strong {
-        font: 68px Instrument Serif;
+        font: 68px "Cormorant Garamond", Georgia, serif;
       }
       .reviews-grid {
         grid-template-columns: 1.2fr 1fr 1fr;
@@ -798,11 +798,11 @@
       }
       .reviews-grid blockquote > div {
         height: 55px;
-        font: 70px Instrument Serif;
+        font: 70px "Cormorant Garamond", Georgia, serif;
       }
       .reviews-grid blockquote p {
         flex: 1;
-        font: 24px/1.35 Instrument Serif;
+        font: 24px/1.35 "Cormorant Garamond", Georgia, serif;
       }
       .reviews-grid footer {
         font-size: 12px;
@@ -855,10 +855,10 @@
       .price-box > div {
         color: var(--cream);
         margin: 8px 0;
-        font: 100px/1 Instrument Serif;
+        font: 100px/1 "Cormorant Garamond", Georgia, serif;
       }
       .price-box sup {
-        font: 24px Inter;
+        font: 24px Manrope;
       }
       .price-box p {
         color: #fff8;
@@ -881,11 +881,11 @@
       .guarantee > strong {
         color: var(--coral);
         border-right: 1px solid #b8aa98;
-        font: 130px/1 Instrument Serif;
+        font: 130px/1 "Cormorant Garamond", Georgia, serif;
       }
       .guarantee h3 {
         margin-bottom: 8px;
-        font: 34px Instrument Serif;
+        font: 34px "Cormorant Garamond", Georgia, serif;
       }
       .guarantee p {
         color: #52605b;
@@ -903,7 +903,7 @@
       }
       .faq-list summary {
         cursor: pointer;
-        font: 25px Instrument Serif;
+        font: 25px "Cormorant Garamond", Georgia, serif;
         list-style: none;
       }
       .faq-list summary span {
@@ -1240,7 +1240,7 @@
       }
       .pain-scenes p {
         margin: 30px 0 0;
-        font: 25px/1.35 Instrument Serif;
+        font: 25px/1.35 "Cormorant Garamond", Georgia, serif;
       }
       .pain-truth {
         border-top: 1px solid #c49a3855;
@@ -1251,7 +1251,7 @@
       }
       .pain-truth strong {
         color: var(--gold);
-        font: 40px Instrument Serif;
+        font: 40px "Cormorant Garamond", Georgia, serif;
       }
       .pain-truth p {
         color: #f3ecdfaa;
@@ -1308,7 +1308,7 @@
         display: block;
       }
       .app-caption strong {
-        font: 38px/1.08 Instrument Serif;
+        font: 38px/1.08 "Cormorant Garamond", Georgia, serif;
         display: block;
       }
       .app-caption p {
@@ -1341,7 +1341,7 @@
       .objection-grid h3 {
         color: var(--coral);
         margin-bottom: 12px;
-        font: 31px Instrument Serif;
+        font: 31px "Cormorant Garamond", Georgia, serif;
       }
       .objection-grid p {
         color: #4e5a55;
@@ -1894,7 +1894,7 @@
       }
       .mid-cta p {
         margin: 0;
-        font: 26px Instrument Serif;
+        font: 26px "Cormorant Garamond", Georgia, serif;
       }
       .mid-cta a {
         color: var(--gold);
@@ -1929,14 +1929,14 @@
         border-radius: 50%;
         outline: 1px solid #c49a3845;
         place-items: center;
-        font: 20px Instrument Serif;
+        font: 20px "Cormorant Garamond", Georgia, serif;
         display: grid;
         box-shadow:
           inset 0 0 24px #c49a381f,
           0 0 28px #c49a3816;
       }
       .content-assurance strong {
-        font: 28px Instrument Serif;
+        font: 28px "Cormorant Garamond", Georgia, serif;
       }
       .content-assurance p {
         color: #f3ecdf99;
@@ -1969,7 +1969,7 @@
         letter-spacing: 0.12em !important;
         border: 1px solid #c49a38 !important;
         margin: 0 !important;
-        font: 9px Inter !important;
+        font: 9px Manrope !important;
         display: flex !important;
         position: absolute !important;
         right: 28px !important;
@@ -2152,7 +2152,7 @@
         text-shadow: 0 18px 38px #0005;
         max-width: 430px;
         margin: 0 0 24px;
-        font: clamp(40px, 3.7vw, 59px) / 0.98 Instrument Serif;
+        font: clamp(40px, 3.7vw, 59px) / 0.98 "Cormorant Garamond", Georgia, serif;
       }
       .showcase-copy p {
         color: #f3ecdfaa;
@@ -2295,14 +2295,14 @@
         border: 1px solid #c49a38;
         border-radius: 50%;
         place-items: center;
-        font: 28px Instrument Serif;
+        font: 28px "Cormorant Garamond", Georgia, serif;
         display: grid;
         box-shadow:
           inset 0 0 20px #c49a3825,
           0 0 22px #c49a3817;
       }
       .feature-glass strong {
-        font: 25px Instrument Serif;
+        font: 25px "Cormorant Garamond", Georgia, serif;
         display: block;
       }
       .feature-glass small {
@@ -2881,7 +2881,7 @@
           width: 20px;
         }
         .feature-glass strong {
-          font: 17px/1.05 Instrument Serif;
+          font: 17px/1.05 "Cormorant Garamond", Georgia, serif;
         }
         .feature-glass small {
           display: none;
@@ -3729,7 +3729,7 @@
         text-transform: uppercase;
         letter-spacing: 0.12em;
         flex-basis: 100%;
-        font: 11px Inter;
+        font: 11px Manrope;
       }
       .reviews-page {
         min-height: 100vh;
@@ -3766,7 +3766,7 @@
       }
       .reviews-hero h1 {
         margin-bottom: 25px;
-        font: clamp(52px, 6vw, 86px) / 0.98 Instrument Serif;
+        font: clamp(52px, 6vw, 86px) / 0.98 "Cormorant Garamond", Georgia, serif;
       }
       .reviews-hero > div:first-child > p:last-child {
         color: #f3ecdfaa;
@@ -3785,7 +3785,7 @@
       }
       .reviews-score strong {
         color: var(--gold);
-        font: 82px/1 Instrument Serif;
+        font: 82px/1 "Cormorant Garamond", Georgia, serif;
         display: block;
       }
       .reviews-score > span {
@@ -3828,7 +3828,7 @@
         border-radius: 4px;
         outline: none;
         padding: 15px 17px;
-        font: 14px Inter;
+        font: 14px Manrope;
       }
       .reviews-toolbar input:focus {
         border-color: var(--gold);
@@ -3888,7 +3888,7 @@
       .all-reviews-grid article > p {
         flex: 1;
         margin: 23px 0;
-        font: 22px/1.4 Instrument Serif;
+        font: 22px/1.4 "Cormorant Garamond", Georgia, serif;
       }
       .all-reviews-grid footer {
         border-top: 1px solid #ffffff0d;
@@ -4170,7 +4170,7 @@
       }
       .hero-package > div:last-child b {
         color: var(--gold);
-        font: 27px/1 Instrument Serif;
+        font: 27px/1 "Cormorant Garamond", Georgia, serif;
       }
       .hero-package span {
         color: #f3ecdf9e;
@@ -4841,7 +4841,7 @@
         max-width: 660px;
         margin: 0;
         color: #fbf3e4;
-        font: 400 clamp(48px, 4.4vw, 76px)/1.05 "Instrument Serif", Georgia, serif;
+        font: 400 clamp(48px, 4.4vw, 76px)/1.05 ""Cormorant Garamond", Georgia, serif", Georgia, serif;
         letter-spacing: -.025em;
       }
       .cycle-native h2 em { color: #e4b95f; font-style: italic; }
@@ -4884,7 +4884,7 @@
       .cycle-native__card p {
         margin: 0;
         color: rgba(251,243,228,.88);
-        font: 400 clamp(23px, 1.65vw, 31px)/1.38 "Instrument Serif", Georgia, serif;
+        font: 400 clamp(23px, 1.65vw, 31px)/1.38 ""Cormorant Garamond", Georgia, serif", Georgia, serif;
       }
       .cycle-native__flow {
         margin-top: clamp(62px, 7vw, 102px);
@@ -4928,7 +4928,7 @@
       .cycle-native__step strong {
         display: block;
         color: #f8efdf;
-        font: 400 clamp(25px, 2vw, 36px)/1 "Instrument Serif", Georgia, serif;
+        font: 400 clamp(25px, 2vw, 36px)/1 ""Cormorant Garamond", Georgia, serif", Georgia, serif;
       }
       .cycle-native__closing {
         max-width: 940px;
@@ -5101,12 +5101,12 @@
         grid-row: 1 / 3;
         align-self: start;
         color: #d6a84b;
-        font: 42px/1 "Instrument Serif", serif;
+        font: 42px/1 ""Cormorant Garamond", Georgia, serif", serif;
       }
       .product-story > .tools-grid h3 {
         margin: 0 0 7px;
         color: #fff8ec;
-        font: 26px/1.05 "Instrument Serif", serif;
+        font: 26px/1.05 ""Cormorant Garamond", Georgia, serif", serif;
       }
       .product-story > .tools-grid p {
         margin: 0;
@@ -5116,7 +5116,7 @@
       }
       @media (max-width: 1080px) {
         .product-story .showcase-stage {
-          grid-template-columns: minmax(310px, 46%) minmax(190px, 22%) 1fr;
+          grid-template-columns: minmax(310px, 50%) 1fr;
           min-height: 700px;
           padding-inline: 40px !important;
         }
@@ -5224,9 +5224,8 @@
       .product-story > .tools-grid article { filter: drop-shadow(0 10px 12px rgba(0,0,0,.16)); }
       @media (min-width: 1101px) {
         .hero-visual { width: min(72vw, 1160px) !important; transform: translateX(5vw) !important; }
-        .product-story .showcase-stage { grid-template-columns: minmax(360px, 43%) minmax(300px, 25%) 1fr; }
-        .product-story .showcase-phone { justify-self: end; transform: translateX(34px); width: min(27vw, 365px) !important; }
-        .product-story > .tools-grid { width: min(28vw, 400px); right: max(clamp(34px,5vw,82px),calc((100vw - 1440px)/2 + 34px)); }
+        .product-story .showcase-stage { grid-template-columns: minmax(360px, 47%) 1fr; }
+        .product-story .showcase-phone { justify-self: center; transform: none; width: min(27vw, 365px) !important; }
       }
       @media (max-width: 720px) {
         .cycle-native__step { grid-template-columns: 76px 1fr; }
@@ -5282,8 +5281,8 @@
       }
       .raem-moments__intro,
       .raem-moments__outro { position: relative; z-index: 2; }
-      .raem-moments__intro { font: 34px/1.08 "Instrument Serif", Georgia, serif; }
-      .raem-moments__outro { font: 23px/1.22 "Instrument Serif", Georgia, serif; }
+      .raem-moments__intro { font: 34px/1.08 ""Cormorant Garamond", Georgia, serif", Georgia, serif; }
+      .raem-moments__outro { font: 23px/1.22 ""Cormorant Garamond", Georgia, serif", Georgia, serif; }
       .raem-moment { position: relative; z-index: 2; text-align: center; }
       .raem-moment img {
         width: 112px;
@@ -5291,7 +5290,7 @@
         object-fit: contain;
         filter: drop-shadow(0 15px 16px rgba(0,0,0,.48));
       }
-      .raem-moment strong { display: block; margin-top: 10px; font: 21px/1.05 "Instrument Serif", Georgia, serif; }
+      .raem-moment strong { display: block; margin-top: 10px; font: 21px/1.05 ""Cormorant Garamond", Georgia, serif", Georgia, serif; }
       .raem-moment span { display: block; margin-top: 6px; color: rgba(255,247,232,.72); font-size: 12px; line-height: 1.35; }
       .raem-moments__path {
         position: absolute;
@@ -5485,7 +5484,7 @@
       }
       .raem-info-belt__item strong {
         color: #103c34;
-        font-family: Georgia, "Times New Roman", serif;
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
         font-size: clamp(13px, .9vw, 16px);
         line-height: 1.16;
         letter-spacing: .025em;
@@ -5589,7 +5588,7 @@
         color: #f47a50;
         background: rgba(2, 27, 23, .72);
         box-shadow: inset 0 1px rgba(255, 255, 255, .06);
-        font: 700 11px/1.15 Inter, Arial, sans-serif;
+        font: 700 11px/1.15 Manrope, Arial, sans-serif;
         letter-spacing: .19em;
         text-transform: uppercase;
       }
@@ -5898,7 +5897,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font: 700 11px/1.2 Inter, Arial, sans-serif;
+  font: 700 11px/1.2 Manrope, Arial, sans-serif;
 }
 .cycle-native__flow-title::before {
   content: "";
@@ -6580,7 +6579,7 @@
   color: #e5bd62;
   opacity: .62;
 }
-.access-journey span { color: #e5bd62; font: 700 10px/1 Inter, sans-serif; }
+.access-journey span { color: #e5bd62; font: 700 10px/1 Manrope, sans-serif; }
 .access-journey b { color: #fff; font-size: 10px; line-height: 1.3; }
 
 /* Três níveis de relevo: luxo com hierarquia, sem retirar profundidade de nenhum card. */
@@ -8408,7 +8407,7 @@ blockquote,
   --coral-hover: #bd4f31;
 
   --text-dark: #17362f;
-  --text-dark-muted: #4f625c;
+  --text-dark-muted: #3d4f48;
   --text-light: #fffaf0;
   --text-light-muted: #d7e1dd;
 }
@@ -8521,19 +8520,25 @@ a[data-cta]:hover,
   color: var(--text-dark-muted) !important;
 }
 
-/* Prova do hero: branco nítido, com sombra verde em vez do contorno preto pesado. */
+/* Prova do hero: texto escuro sobre o creme claro (branco sumia). Estrelas douradas. */
 .hero .trust-row,
 .hero .trust-row a,
 .hero .trust-row small,
-.hero .trust-row > span,
-.hero .trust-row .stars {
-  color: #fff !important;
+.hero .trust-row > span {
+  color: #17362f !important;
   opacity: 1 !important;
-  -webkit-text-fill-color: #fff !important;
-  -webkit-text-stroke: .2px rgba(6, 35, 29, .72) !important;
-  text-shadow:
-    0 1px 2px rgba(3, 27, 22, .95),
-    0 0 8px rgba(3, 27, 22, .62) !important;
+  -webkit-text-fill-color: #17362f !important;
+  -webkit-text-stroke: 0 !important;
+  text-shadow: 0 1px 1px rgba(255, 250, 240, .6) !important;
+}
+.hero .trust-row a {
+  text-decoration-color: color-mix(in srgb, #17362f 45%, transparent);
+}
+.hero .trust-row .stars {
+  color: #9c7328 !important;
+  -webkit-text-fill-color: #9c7328 !important;
+  -webkit-text-stroke: 0 !important;
+  text-shadow: 0 1px 1px rgba(255, 250, 240, .6) !important;
 }
 
 /* Bordas e medalhões compartilham apenas os dois dourados oficiais. */
