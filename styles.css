@@ -5116,7 +5116,9 @@
       }
       @media (max-width: 1080px) {
         .product-story .showcase-stage {
-          grid-template-columns: minmax(310px, 50%) 1fr;
+          grid-template-columns: minmax(300px, 1fr) minmax(280px, 380px);
+          justify-content: center;
+          column-gap: clamp(32px, 4vw, 64px);
           min-height: 700px;
           padding-inline: 40px !important;
         }
@@ -5224,8 +5226,10 @@
       .product-story > .tools-grid article { filter: drop-shadow(0 10px 12px rgba(0,0,0,.16)); }
       @media (min-width: 1101px) {
         .hero-visual { width: min(72vw, 1160px) !important; transform: translateX(5vw) !important; }
-        .product-story .showcase-stage { grid-template-columns: minmax(360px, 47%) 1fr; }
-        .product-story .showcase-phone { justify-self: center; transform: none; width: min(27vw, 365px) !important; }
+        .product-story .showcase-stage { grid-template-columns: 1fr minmax(340px, 580px) minmax(320px, 420px) 1fr; column-gap: clamp(36px, 3.5vw, 80px); }
+        .product-story .showcase-copy { grid-column: 2 !important; }
+        .product-story .floating-features { grid-column: 2 !important; }
+        .product-story .showcase-phone { grid-column: 3 !important; justify-self: center; transform: none; width: min(26vw, 360px) !important; }
       }
       @media (max-width: 720px) {
         .cycle-native__step { grid-template-columns: 76px 1fr; }
@@ -6276,25 +6280,22 @@
 .reviews-grid blockquote {
   isolation: isolate;
   overflow: hidden;
-  color: #fff !important;
+  color: #213a33 !important;
   background:
-    radial-gradient(circle at 12% 8%, rgba(75, 155, 128, .24), transparent 34%),
-    repeating-linear-gradient(122deg, transparent 0 12px, rgba(237, 211, 151, .045) 13px 14px),
-    linear-gradient(145deg, #123f35 0%, #0a2d27 100%) !important;
-  border: 1px solid rgba(213, 174, 86, .48) !important;
-  box-shadow: inset 0 1px rgba(255, 255, 255, .07), 0 18px 40px rgba(0, 0, 0, .24) !important;
+    radial-gradient(circle at 14% 8%, rgba(255, 255, 255, .55), transparent 42%),
+    linear-gradient(145deg, #f4ecdc 0%, #e8ddc6 100%) !important;
+  border: 1px solid rgba(191, 150, 72, .55) !important;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .9), 0 18px 40px rgba(54, 42, 25, .16) !important;
 }
 .reviews-grid blockquote:nth-child(2) {
   background:
-    radial-gradient(circle at 85% 12%, rgba(59, 137, 115, .25), transparent 32%),
-    repeating-linear-gradient(58deg, transparent 0 15px, rgba(234, 202, 128, .042) 16px 17px),
-    linear-gradient(150deg, #0d382f 0%, #061f1a 100%) !important;
+    radial-gradient(circle at 86% 12%, rgba(255, 255, 255, .5), transparent 40%),
+    linear-gradient(150deg, #f1e8d5 0%, #e5dac2 100%) !important;
 }
 .reviews-grid blockquote:nth-child(3) {
   background:
-    radial-gradient(circle at 20% 88%, rgba(62, 139, 117, .22), transparent 35%),
-    repeating-linear-gradient(132deg, transparent 0 18px, rgba(232, 199, 123, .045) 19px 20px),
-    linear-gradient(145deg, #173c33 0%, #092820 100%) !important;
+    radial-gradient(circle at 20% 90%, rgba(255, 255, 255, .48), transparent 44%),
+    linear-gradient(145deg, #f3ebd9 0%, #e7dbc4 100%) !important;
 }
 .reviews-grid blockquote::before {
   content: "";
@@ -6307,12 +6308,23 @@
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.76'/%3E%3C/svg%3E");
   background-size: 160px 160px;
 }
-.reviews-grid blockquote > div,
 .reviews-grid blockquote > p,
-.reviews-grid blockquote footer,
+.reviews-grid blockquote footer {
+  color: #213a33 !important;
+  text-shadow: none !important;
+}
 .reviews-grid blockquote footer span {
-  color: #fff !important;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, .44);
+  color: #62726b !important;
+  text-shadow: none !important;
+}
+.reviews-grid blockquote > div {
+  color: #b38734 !important;
+  text-shadow: none !important;
+}
+.reviews-grid .review-signal {
+  color: #8f6e2b !important;
+  border-color: rgba(143, 110, 43, .5) !important;
+  -webkit-text-fill-color: #8f6e2b !important;
 }
 
 /* Autor: grain mais presente e branco absoluto onde havia baixo contraste. */
@@ -6350,18 +6362,16 @@
 /* Acabamento final: linhas sutis nos dois quadros verdes e relevo nos cards. */
 .reviews-section {
   background-image:
-    repeating-linear-gradient(118deg, transparent 0 26px, rgba(229, 196, 120, .032) 27px, transparent 28px 55px),
-    repeating-linear-gradient(28deg, transparent 0 52px, rgba(118, 186, 164, .022) 53px, transparent 54px 106px),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E"),
     radial-gradient(circle at 18% 25%, rgba(40, 95, 80, .18), transparent 28%),
     radial-gradient(circle at 88% 80%, rgba(196, 154, 56, .07), transparent 25%) !important;
+  background-size: 200px 200px, auto, auto !important;
 }
 .reviews-grid blockquote::before {
-  opacity: .48 !important;
-  mix-blend-mode: soft-light !important;
-  background-image:
-    repeating-linear-gradient(118deg, transparent 0 19px, rgba(244, 219, 158, .085) 20px, transparent 21px 40px),
-    repeating-linear-gradient(28deg, transparent 0 58px, rgba(141, 202, 181, .045) 59px, transparent 60px 118px) !important;
-  background-size: auto !important;
+  opacity: .55 !important;
+  mix-blend-mode: multiply !important;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.5'/%3E%3C/svg%3E") !important;
+  background-size: 150px 150px !important;
 }
 .author-card::after {
   opacity: .72 !important;
@@ -8520,7 +8530,19 @@ a[data-cta]:hover,
   color: var(--text-dark-muted) !important;
 }
 
-/* Prova do hero: texto escuro sobre o creme claro (branco sumia). Estrelas douradas. */
+/* Prova do hero: faixa creme própria para ler sobre qualquer fundo (creme ou verde). */
+.hero .trust-row {
+  width: fit-content !important;
+  max-width: 100% !important;
+  align-self: flex-start !important;
+  background: rgba(243, 236, 223, .93) !important;
+  border: 1px solid rgba(191, 150, 72, .42) !important;
+  border-radius: 12px !important;
+  padding: 11px 16px !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+  backdrop-filter: blur(3px) !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .16) !important;
+}
 .hero .trust-row,
 .hero .trust-row a,
 .hero .trust-row small,
@@ -8529,7 +8551,7 @@ a[data-cta]:hover,
   opacity: 1 !important;
   -webkit-text-fill-color: #17362f !important;
   -webkit-text-stroke: 0 !important;
-  text-shadow: 0 1px 1px rgba(255, 250, 240, .6) !important;
+  text-shadow: none !important;
 }
 .hero .trust-row a {
   text-decoration-color: color-mix(in srgb, #17362f 45%, transparent);
@@ -8698,5 +8720,50 @@ a[data-cta]:hover,
   .objection-grid article:nth-child(2n),
   .objection-grid article:last-child {
     padding: 26px 22px 24px !important;
+  }
+}
+
+/* ===== Relatos em bege: texto escuro legível (override final) ===== */
+.reviews-grid blockquote > p,
+.reviews-grid blockquote footer {
+  color: #213a33 !important;
+  -webkit-text-fill-color: #213a33 !important;
+  text-shadow: none !important;
+}
+.reviews-grid blockquote footer span {
+  color: #6a7a72 !important;
+  -webkit-text-fill-color: #6a7a72 !important;
+}
+.reviews-grid blockquote > div {
+  color: #b38734 !important;
+  -webkit-text-fill-color: #b38734 !important;
+}
+.reviews-grid .review-signal {
+  color: #8f6e2b !important;
+  -webkit-text-fill-color: #8f6e2b !important;
+  border-color: rgba(143, 110, 43, .5) !important;
+}
+
+/* ===== Mobile: cards "Quando…" (feature-glass) em bege com grain ===== */
+@media (max-width: 900px) {
+  .product-story .feature-glass {
+    background:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.35'/%3E%3C/svg%3E"),
+      linear-gradient(145deg, #f4ecdc 0%, #e8ddc6 100%) !important;
+    background-size: 150px 150px, auto !important;
+    border: 1px solid rgba(191, 150, 72, .5) !important;
+    border-radius: 16px !important;
+    box-shadow: inset 0 1px rgba(255, 255, 255, .85), 0 12px 26px rgba(54, 42, 25, .14) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  .product-story .feature-glass::before { display: none !important; }
+  .product-story .feature-glass strong { color: #17362f !important; }
+  .product-story .feature-glass small { color: #55655e !important; }
+  .product-story .feature-glass > span {
+    color: #a66734 !important;
+    background: rgba(255, 255, 255, .5) !important;
+    border-color: rgba(166, 103, 52, .5) !important;
+    box-shadow: none !important;
   }
 }
