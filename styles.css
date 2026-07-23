@@ -8551,20 +8551,20 @@ blockquote,
   border-color: var(--gold) !important;
 }
 
-/* Todos os caminhos que levam à compra usam o mesmo coral. */
+/* Todos os caminhos que levam à compra usam o mesmo dourado. */
 a[data-cta],
 .primary-cta,
 .method-conversion > a,
 .reviews-actions .reviews-buy,
 .author-cta,
 .mobile-buy {
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-  background: var(--coral) !important;
-  border-color: var(--coral) !important;
+  color: #17362f !important;
+  -webkit-text-fill-color: #17362f !important;
+  background: linear-gradient(145deg, #e6c87c 0%, #c69c3c 54%, #a97f2a 100%) !important;
+  border-color: #d9b566 !important;
   box-shadow:
-    0 13px 28px rgba(94, 39, 27, .24),
-    inset 0 1px rgba(255, 255, 255, .26) !important;
+    0 13px 28px rgba(83, 62, 20, .28),
+    inset 0 1px rgba(255, 255, 255, .5) !important;
 }
 
 a[data-cta]:hover,
@@ -8573,8 +8573,8 @@ a[data-cta]:hover,
 .reviews-actions .reviews-buy:hover,
 .author-cta:hover,
 .mobile-buy:hover {
-  background: var(--coral-hover) !important;
-  border-color: var(--coral-hover) !important;
+  background: linear-gradient(145deg, #eed08a 0%, #d0a648 54%, #b78a32 100%) !important;
+  border-color: #e6c87c !important;
 }
 
 /* Contraste mínimo consistente nos fundos escuros. */
@@ -9092,4 +9092,13 @@ a[data-cta]:hover,
   .product-story .showcase-stage {
     background-position: 62% center !important;
   }
+}
+
+/* ===== Encurtar a versão mobile (blocos redundantes ocultos só no mobile) ===== */
+@media (max-width: 900px) {
+  .cycle-native__cards { display: none !important; }
+  .raem-info-belt { display: none !important; }
+  .access-journey { display: none !important; }
+  .inner-voice--offer { display: none !important; }
+  .author-pillars { display: none !important; }
 }
