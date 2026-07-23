@@ -6362,10 +6362,9 @@
 /* Acabamento final: linhas sutis nos dois quadros verdes e relevo nos cards. */
 .reviews-section {
   background-image:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E"),
     radial-gradient(circle at 18% 25%, rgba(40, 95, 80, .18), transparent 28%),
     radial-gradient(circle at 88% 80%, rgba(196, 154, 56, .07), transparent 25%) !important;
-  background-size: 200px 200px, auto, auto !important;
+  background-size: auto !important;
 }
 .reviews-grid blockquote::before {
   opacity: .55 !important;
@@ -8765,5 +8764,21 @@ a[data-cta]:hover,
     background: rgba(255, 255, 255, .5) !important;
     border-color: rgba(166, 103, 52, .5) !important;
     box-shadow: none !important;
+  }
+}
+
+/* ===== Hero: caixa de pacote e botão mais curtos; botão de compra removido no mobile ===== */
+.hero-copy .hero-package {
+  max-width: 440px !important;
+}
+.hero-copy .primary-cta {
+  max-width: 440px !important;
+}
+.hero .trust-row {
+  max-width: 440px !important;
+}
+@media (max-width: 900px) {
+  .hero-copy > .primary-cta[data-cta="hero"] {
+    display: none !important;
   }
 }
