@@ -8551,30 +8551,77 @@ blockquote,
   border-color: var(--gold) !important;
 }
 
-/* Todos os caminhos que levam à compra usam o mesmo dourado. */
-a[data-cta],
+/* Caminhos de compra em coral (a caixa-pacote fica de fora, mantém visual de caixa). */
+a[data-cta]:not(.hero-package),
 .primary-cta,
 .method-conversion > a,
 .reviews-actions .reviews-buy,
 .author-cta,
 .mobile-buy {
-  color: #17362f !important;
-  -webkit-text-fill-color: #17362f !important;
-  background: linear-gradient(145deg, #e6c87c 0%, #c69c3c 54%, #a97f2a 100%) !important;
-  border-color: #d9b566 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  background: var(--coral) !important;
+  border-color: var(--coral) !important;
   box-shadow:
-    0 13px 28px rgba(83, 62, 20, .28),
-    inset 0 1px rgba(255, 255, 255, .5) !important;
+    0 13px 28px rgba(94, 39, 27, .24),
+    inset 0 1px rgba(255, 255, 255, .26) !important;
 }
 
-a[data-cta]:hover,
+a[data-cta]:not(.hero-package):hover,
 .primary-cta:hover,
 .method-conversion > a:hover,
 .reviews-actions .reviews-buy:hover,
 .author-cta:hover,
 .mobile-buy:hover {
-  background: linear-gradient(145deg, #eed08a 0%, #d0a648 54%, #b78a32 100%) !important;
-  border-color: #e6c87c !important;
+  background: var(--coral-hover) !important;
+  border-color: var(--coral-hover) !important;
+}
+
+/* Caixa "Acesso completo" agora é clicável: mantém o visual de caixa, com afordância de clique. */
+a.hero-package {
+  text-decoration: none !important;
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
+  cursor: pointer;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+a.hero-package:hover {
+  border-color: #e0c07f !important;
+  box-shadow: inset 0 1px #fff2, 0 18px 36px #0006 !important;
+  transform: translateY(-2px);
+}
+.hero-package-arrow {
+  color: #e4c578;
+  -webkit-text-fill-color: #e4c578;
+  font-size: .82em;
+  margin-left: 4px;
+}
+
+/* Botões dourados no desktop (o mobile mantém o coral). */
+@media (min-width: 901px) {
+  a[data-cta]:not(.hero-package),
+  .primary-cta,
+  .method-conversion > a,
+  .reviews-actions .reviews-buy,
+  .author-cta,
+  .mobile-buy {
+    color: #17362f !important;
+    -webkit-text-fill-color: #17362f !important;
+    background: linear-gradient(145deg, #e6c87c 0%, #c69c3c 54%, #a97f2a 100%) !important;
+    border-color: #d9b566 !important;
+    box-shadow:
+      0 13px 28px rgba(83, 62, 20, .28),
+      inset 0 1px rgba(255, 255, 255, .5) !important;
+  }
+  a[data-cta]:not(.hero-package):hover,
+  .primary-cta:hover,
+  .method-conversion > a:hover,
+  .reviews-actions .reviews-buy:hover,
+  .author-cta:hover,
+  .mobile-buy:hover {
+    background: linear-gradient(145deg, #eed08a 0%, #d0a648 54%, #b78a32 100%) !important;
+    border-color: #e6c87c !important;
+  }
 }
 
 /* Contraste mínimo consistente nos fundos escuros. */
@@ -9094,11 +9141,8 @@ a[data-cta]:hover,
   }
 }
 
-/* ===== Encurtar a versão mobile (blocos redundantes ocultos só no mobile) ===== */
-@media (max-width: 900px) {
-  .cycle-native__cards { display: none !important; }
-  .raem-info-belt { display: none !important; }
-  .access-journey { display: none !important; }
-  .inner-voice--offer { display: none !important; }
-  .author-pillars { display: none !important; }
+/* Aproxima a caixa-pacote clicável do bloco de confiança logo abaixo. */
+@media (min-width: 901px) {
+  .hero-copy .hero-package { margin-bottom: 6px !important; }
+  .hero .trust-row { margin-top: 12px !important; }
 }
