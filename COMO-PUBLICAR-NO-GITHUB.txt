@@ -1,0 +1,17 @@
+COMO PUBLICAR NO GITHUB PAGES
+
+1. Extraia este ZIP no seu computador.
+2. Abra o repositório que você criou no GitHub.
+3. Envie TODOS os arquivos extraídos, incluindo o index.html.
+   Não envie a pasta fechada: o index.html precisa aparecer na página principal do repositório.
+4. No GitHub, abra Settings > Pages.
+5. Em Build and deployment, escolha Deploy from a branch.
+6. Selecione a branch main, a pasta /(root) e clique em Save.
+7. Aguarde alguns minutos. O GitHub mostrará o endereço do site.
+
+CONFERÊNCIA
+- O arquivo index.html está na raiz.
+- Imagens, vídeo, páginas legais e scripts estão incluídos.
+- Os caminhos são relativos e funcionam em repositórios do GitHub Pages.
+
+Observação: se depois você conectar um domínio próprio, atualize os endereços de compartilhamento e o sitemap para o domínio definitivo.
