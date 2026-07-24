@@ -9146,3 +9146,645 @@ a.hero-package:hover {
   .hero-copy .hero-package { margin-bottom: 6px !important; }
   .hero .trust-row { margin-top: 12px !important; }
 }
+
+/* ============================================================
+   POLIMENTO VISUAL v24 — profundidade, transições e ouro
+   Bloco final: prioridade por ordem de origem. Não altera a
+   paleta; só trabalha luz, camada e transição.
+   ============================================================ */
+
+/* --- 1) OURO NO LUGAR DO CORAL (mantém só "emoção" no hero) --- */
+/* Overlines/eyebrows sobre fundo claro */
+.eyebrow { color: #b08636 !important; }
+.eyebrow:after {
+  border: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #d9b877, #c49a38 55%, transparent) !important;
+}
+/* Overlines sobre fundo escuro: ouro mais claro */
+.product-story .eyebrow, .cycle-native .eyebrow, .cycle-native__eyebrow,
+.reviews-section .eyebrow, .faq-section .eyebrow, .proof-label {
+  color: #e4c07a !important;
+}
+.product-story .eyebrow:after, .cycle-native .eyebrow:after,
+.cycle-native__eyebrow::after, .reviews-section .eyebrow:after,
+.faq-section .eyebrow:after {
+  background: linear-gradient(90deg, #efd48a, #c9a24a 60%, transparent) !important;
+  border-color: #efd48a !important;
+}
+/* Hero eyebrow também vira ouro (só "emoção" fica coral) */
+.hero .eyebrow { color: #b08636 !important; }
+.hero .eyebrow:after {
+  border-color: transparent !important;
+  background: linear-gradient(90deg, #c9a24a, transparent) !important;
+  height: 2px !important;
+}
+/* Números do ciclo (01/02/03): coral -> ouro */
+.cycle-native__number { color: #c9a24a !important; }
+/* Ícones do fluxo (Restrição/Ansiedade/...) em ouro */
+.cycle-native__dot { color: #e7bf68 !important; border-color: rgba(228,185,95,.62) !important; }
+.cycle-native__dot svg { stroke: currentColor !important; }
+.cycle-native__step:not(:last-child)::after {
+  background: linear-gradient(90deg, rgba(228,185,95,.55), rgba(228,185,95,.16)) !important;
+}
+
+/* --- 2) BRILHO METÁLICO NO OURO GRANDE (letras R A E M e nº 7) --- */
+.method-card > span, .guarantee > strong {
+  background: linear-gradient(155deg, #efd48a 0%, #c9a24a 46%, #9a7526 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  filter: drop-shadow(0 1px 0 rgba(255,240,200,.16));
+}
+
+/* --- 3) PROFUNDIDADE NOS VERDES (brilho de topo + base grounded) --- */
+.product-story, .cycle-native, .reviews-section, .faq-section, .footer { position: relative; }
+.product-story, .cycle-native, .reviews-section, .faq-section {
+  box-shadow:
+    inset 0 48px 74px -48px rgba(150,200,175,.11),
+    inset 0 -96px 130px -74px rgba(0,0,0,.42) !important;
+}
+
+/* --- 4) COSTURAS ENTRE SEÇÕES (fim do corte reto de cor) --- */
+.seam {
+  display: block; width: 100%; height: 150px;
+  margin: 0; border: 0; pointer-events: none; position: relative; z-index: 0;
+}
+.seam::after {
+  content: ""; position: absolute; inset: 0;
+  background: repeating-linear-gradient(117deg, transparent 0 14px, rgba(120,150,120,.035) 15px 16px);
+}
+/* Cada costura segura a cor de origem no topo (respiro p/ o texto acima)
+   e a cor de destino embaixo, com a transição suave no meio. */
+.seam--belt-story  { background: linear-gradient(to bottom, #ece0c8 0%, #ece0c8 16%, #7a7256 44%, #16241b 74%, #031b17 100%); }
+.seam--cycle-method{ background: linear-gradient(to bottom, #04201a 0%, #04201a 20%, #16241b 40%, #9c9276 74%, #f3ecdf 100%); }
+.seam--method-reviews { background: linear-gradient(to bottom, #f1e9dc 0%, #f1e9dc 16%, #9c9276 44%, #182620 76%, #091d1a 100%); }
+.seam--reviews-author { background: linear-gradient(to bottom, #091d1a 0%, #091d1a 20%, #182620 40%, #9c9276 74%, #f3ecdf 100%); }
+.seam--offer-faq   { background: linear-gradient(to bottom, #f1e9dc 0%, #f1e9dc 16%, #9c9276 44%, #14211b 76%, #061714 100%); }
+
+@media (max-width: 640px) {
+  .seam { height: 104px; }
+}
+
+/* Overline do fluxo do ciclo: coral -> ouro (fechando o retoque) */
+.cycle-native__flow-title, .cycle-native__flow-title span { color: #e4c07a !important; }
+.cycle-native__flow-title::before { background: linear-gradient(90deg, #efd48a, transparent) !important; }
+
+/* ============================================================
+   v24.1 — Fundo esmeralda no bloco do app + brilho atrás do
+   celular, e redesenho minimalista do cinto de informações.
+   ============================================================ */
+
+/* --- Fundo do bloco do app: folhas -> esmeralda limpo + glow --- */
+.product-story .showcase-stage {
+  background:
+    linear-gradient(135deg, #052821 0%, #0a3a2e 54%, #041c18 100%) !important;
+}
+.product-story .showcase-stage::after {
+  opacity: 1 !important;
+  background:
+    radial-gradient(44% 48% at 74% 47%, rgba(120,205,165,.32), rgba(30,90,70,.12) 45%, transparent 72%),
+    radial-gradient(26% 30% at 74% 47%, rgba(226,192,122,.18), transparent 60%) !important;
+}
+
+/* --- Cinto de informações: achata o "orbe" e o emboss --- */
+.raem-info-belt {
+  background:
+    repeating-linear-gradient(118deg, transparent 0 22px, rgba(73,53,30,.018) 23px 24px),
+    linear-gradient(180deg, #fbf4e6 0%, #f2e6cf 100%) !important;
+  border-inline-width: 0 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.66), 0 1px 0 rgba(120,90,40,.08) !important;
+}
+.raem-info-belt::before, .raem-info-belt::after {
+  background: linear-gradient(90deg, transparent, rgba(180,140,60,.5) 12%, rgba(150,116,47,.66) 50%, rgba(180,140,60,.5) 88%, transparent) !important;
+  opacity: .7 !important;
+}
+/* Ícone: anel fino e plano, sem brilho de plástico */
+.raem-info-belt__icon {
+  flex-basis: 48px !important;
+  width: 48px !important;
+  height: 48px !important;
+  padding: 11px !important;
+  color: #b0863a !important;
+  background: transparent !important;
+  border: 1px solid rgba(178,140,62,.42) !important;
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+}
+.raem-info-belt__icon svg, svg.raem-info-belt__icon { stroke-width: 1.55 !important; }
+.raem-info-belt__item:hover .raem-info-belt__icon {
+  transform: none !important;
+  background: rgba(192,160,96,.10) !important;
+  border-color: rgba(178,140,62,.72) !important;
+  box-shadow: none !important;
+}
+/* Rótulo: caixa-alta discreta, tracking editorial, sem emboss */
+.raem-info-belt__item strong {
+  color: #4a3d28 !important;
+  font-weight: 600 !important;
+  font-size: clamp(11.5px, .8vw, 13.5px) !important;
+  line-height: 1.28 !important;
+  letter-spacing: .1em !important;
+  text-transform: uppercase !important;
+  text-shadow: none !important;
+}
+/* Divisores discretos */
+.raem-info-belt__item + .raem-info-belt__item::before {
+  background: linear-gradient(180deg, transparent, rgba(150,116,47,.3) 24%, rgba(150,116,47,.3) 76%, transparent) !important;
+  box-shadow: none !important;
+}
+/* Remove o realce translúcido de hover (parecia botão) */
+.raem-info-belt__item::after { display: none !important; }
+@media (max-width: 700px) {
+  .raem-info-belt__icon { flex-basis: 44px !important; width: 44px !important; height: 44px !important; padding: 10px !important; }
+  .raem-info-belt__item strong { font-size: 11.5px !important; letter-spacing: .08em !important; }
+}
+
+/* ============================================================
+   v25 — REFINAMENTO DE LUXO
+   Remove molduras duplas (quadro-dentro-de-quadro) e camadas de
+   grain, reforça o brilho atrás do celular e dá acabamento fino
+   às áreas de método→conversão, depoimentos, autor e compra.
+   ============================================================ */
+
+/* (1) Primeira parte sem degradê — some a costura cinto→app */
+.seam--belt-story { display: none !important; }
+
+/* (2) Brilho considerável atrás do celular */
+.product-story .showcase-stage::after {
+  opacity: 1 !important;
+  background:
+    radial-gradient(52% 58% at 73% 46%, rgba(150,238,192,.44), rgba(38,120,90,.16) 40%, transparent 70%),
+    radial-gradient(34% 40% at 73% 46%, rgba(238,206,138,.30), transparent 58%) !important;
+}
+
+/* (3) Faixa método→conversão: sem moldura dupla e sem grain */
+.method-conversion {
+  background:
+    radial-gradient(120% 100% at 88% 0, rgba(224,185,95,.16), transparent 46%),
+    linear-gradient(135deg, #12362d 0%, #0a2720 60%, #061b16 100%) !important;
+  border: 1px solid rgba(212,176,110,.42) !important;
+  border-radius: 7px !important;
+  box-shadow:
+    0 26px 60px rgba(6,20,16,.34),
+    inset 0 1px 0 rgba(255,244,214,.08),
+    inset 0 0 0 1px rgba(212,176,110,.10) !important;
+}
+.method-conversion::after { display: none !important; }
+
+/* (4) Depoimentos: remove grain dos cards (fundo e texto limpos) */
+.reviews-grid blockquote::before { display: none !important; }
+.reviews-grid blockquote,
+.reviews-grid blockquote:nth-child(2),
+.reviews-grid blockquote:nth-child(3) {
+  background: linear-gradient(155deg, #f6efe0 0%, #efe4cd 100%) !important;
+  border: 1px solid rgba(191,150,72,.42) !important;
+  box-shadow: 0 18px 44px rgba(6,20,16,.22) !important;
+}
+
+/* (5) Área do autor: sem moldura dupla, grain quase zerado, hairline fino */
+.author-card {
+  background:
+    radial-gradient(90% 72% at 8% 4%, rgba(227,190,103,.12), transparent 44%),
+    linear-gradient(150deg, #143a30 0%, #0c2922 56%, #071c17 100%) !important;
+  border: 1px solid rgba(212,176,110,.40) !important;
+  border-radius: 9px !important;
+  box-shadow:
+    0 40px 92px rgba(6,20,16,.34),
+    inset 0 1px 0 rgba(255,244,214,.07),
+    inset 0 0 0 1px rgba(212,176,110,.10) !important;
+}
+.author-card::after { opacity: .09 !important; mix-blend-mode: soft-light !important; }
+.author-photo-wrap:before {
+  inset: -10px 10px 10px -10px !important;
+  border: 1px solid rgba(212,176,110,.55) !important;
+}
+
+/* (6) Área de compra final: sem moldura dupla no price-box */
+.offer-card .price-box {
+  border: 1px solid rgba(228,197,120,.42) !important;
+  box-shadow:
+    0 24px 50px rgba(6,20,16,.26),
+    inset 0 1px 0 rgba(255,244,214,.07) !important;
+}
+.offer-card .price-box::after { display: none !important; }
+
+/* ============================================================
+   v26 — ÁREA DO AUTOR: refinamento visual
+   Integra a foto de estúdio no card, adiciona a assinatura real,
+   dá presença à citação e reequilibra a coluna (sem inventar
+   credenciais).
+   ============================================================ */
+
+/* (a) Funde o fundo cinza da foto no card esmeralda + leve grade de cor */
+.author-photo-wrap { overflow: hidden; }
+.author-photo-wrap img { filter: contrast(1.05) saturate(.9) brightness(.97) !important; }
+.author-photo-wrap::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background:
+    radial-gradient(112% 126% at 50% 31%, transparent 33%, rgba(10,36,29,.5) 60%, rgba(7,26,21,.97) 100%),
+    linear-gradient(180deg, rgba(16,60,48,.14) 0%, rgba(9,38,30,.22) 100%);
+}
+.author-seal { z-index: 3 !important; }
+
+/* (b) Assinatura real (dourada, abaixo do nome) */
+.author-signature {
+  display: block;
+  width: clamp(196px, 17vw, 250px);
+  height: auto;
+  margin: 14px 0 2px;
+  opacity: .95;
+}
+
+/* (c) Reequilíbrio da coluna direita — distribui o espaço em vez de um vazio */
+.author-card { align-items: stretch !important; }
+.author-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: clamp(22px, 2.4vw, 34px) !important;
+  height: 100%;
+}
+
+/* (d) Chips de tema mais finos e elegantes */
+.author-pillars span {
+  background: rgba(212,176,110,.06) !important;
+  border: 1px solid rgba(212,176,110,.30) !important;
+  color: #e4c07a !important;
+  -webkit-text-fill-color: #e4c07a !important;
+  text-shadow: none !important;
+}
+
+/* (e) Citação com presença — aspas douradas grandes */
+.author-quote {
+  position: relative !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(17px, 1.55vw, 22px) !important;
+  line-height: 1.5 !important;
+}
+.author-quote::before {
+  content: "\201C";
+  position: absolute;
+  left: 6px; top: -30px;
+  font-family: Georgia, serif;
+  font-size: 72px; line-height: 1;
+  color: rgba(212,176,110,.42);
+  pointer-events: none;
+}
+
+/* ============================================================
+   v27 — MÁQUINA DE CONVERSÃO
+   Prova social real, CTA dominante, ancoragem de valor,
+   garantia de risco zero e compra persistente no mobile.
+   ============================================================ */
+
+/* CTA principal do hero */
+.hero-primary-cta {
+  box-sizing: border-box !important;
+  width: min(100%, 470px) !important;
+  min-height: 58px !important;
+  margin: 12px 0 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  color: #08251e !important;
+  -webkit-text-fill-color: #08251e !important;
+  background: linear-gradient(135deg, #efd48a 0%, #d7ad50 46%, #bd8e2f 100%) !important;
+  border: 1px solid rgba(255, 235, 170, .8) !important;
+  border-radius: 4px !important;
+  box-shadow:
+    0 14px 30px rgba(73, 49, 12, .24),
+    inset 0 1px 0 rgba(255, 255, 255, .55) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: .055em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease !important;
+}
+
+.hero-primary-cta:hover {
+  transform: translateY(-2px) !important;
+  filter: brightness(1.05);
+  box-shadow:
+    0 19px 38px rgba(73, 49, 12, .3),
+    inset 0 1px 0 rgba(255, 255, 255, .65) !important;
+}
+
+/* Provas reais */
+.proof-meta {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1620px);
+  margin: 30px auto 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.proof-meta span {
+  padding: 8px 12px;
+  border: 1px solid rgba(228, 192, 122, .34);
+  border-radius: 999px;
+  color: #efd48a;
+  background: rgba(255, 255, 255, .035);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.proof-print-grid {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1620px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 30px);
+  align-items: start;
+}
+
+.proof-print {
+  position: relative;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background: linear-gradient(150deg, #f7efdf 0%, #e9dcc4 100%);
+  border: 1px solid rgba(228, 192, 122, .5);
+  border-radius: 10px;
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, .28),
+    inset 0 1px 0 rgba(255, 255, 255, .8);
+}
+
+.proof-print img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  object-position: center top;
+  background: #f8f4ec;
+  border-radius: 5px;
+}
+
+.proof-print figcaption {
+  padding: 13px 8px 6px;
+  color: #17362f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Empilhamento de valor */
+.value-stack {
+  width: min(100%, 690px);
+  margin: 28px 0 8px;
+  overflow: hidden;
+  border: 1px solid rgba(228, 197, 120, .3);
+  border-radius: 8px;
+  background: rgba(2, 19, 15, .24);
+}
+
+.value-stack p,
+.value-stack > div {
+  margin: 0 !important;
+  padding: 12px 16px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid rgba(228, 197, 120, .14);
+  color: rgba(250, 244, 229, .8) !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+}
+
+.value-stack p b {
+  color: #e4c07a !important;
+  white-space: nowrap;
+}
+
+.value-stack > div {
+  border-bottom: 0;
+  background: rgba(228, 192, 122, .08);
+  color: #fff7e7 !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.value-stack > div strong {
+  color: #efd48a;
+  font-family: var(--font-display);
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+.price-box > span:first-of-type s {
+  color: rgba(255, 244, 220, .58);
+  text-decoration-thickness: 1px;
+  text-decoration-color: #e4c07a;
+}
+
+/* Garantia em destaque */
+.guarantee {
+  grid-template-columns: 92px minmax(0, 1fr) !important;
+  gap: clamp(22px, 3vw, 40px) !important;
+  align-items: center !important;
+  padding: clamp(30px, 4vw, 48px) !important;
+  border: 1px solid rgba(196, 154, 56, .48) !important;
+  border-radius: 10px !important;
+  background:
+    radial-gradient(70% 100% at 0 0, rgba(228, 192, 122, .13), transparent 65%),
+    linear-gradient(135deg, #12382f 0%, #071f1a 100%) !important;
+  box-shadow: 0 28px 65px rgba(8, 28, 23, .24) !important;
+}
+
+.guarantee-shield {
+  width: 84px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+}
+
+.guarantee-shield svg {
+  width: 74px;
+  height: auto;
+  overflow: visible;
+}
+
+.guarantee-shield path:first-child {
+  fill: rgba(228, 192, 122, .08);
+  stroke: #d7ad50;
+  stroke-width: 2;
+}
+
+.guarantee-shield path:last-child {
+  fill: none;
+  stroke: #efd48a;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+.guarantee-kicker {
+  display: block;
+  margin-bottom: 7px;
+  color: #e4c07a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.guarantee h3,
+.guarantee p {
+  color: #fff7e7 !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+.guarantee h3 {
+  margin-bottom: 8px !important;
+}
+
+.guarantee p {
+  max-width: 700px;
+  opacity: .76;
+}
+
+/* Barra de compra persistente — somente mobile */
+.mobile-purchase-bar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+
+  .hero-primary-cta {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 56px !important;
+    font-size: 12.5px !important;
+  }
+
+  .proof-meta {
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .proof-print-grid {
+    grid-template-columns: 86vw 86vw 86vw;
+    gap: 16px;
+    margin-inline: calc(50% - 50vw);
+    padding: 4px 7vw 28px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .proof-print-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .proof-print {
+    scroll-snap-align: center;
+  }
+
+  .guarantee {
+    grid-template-columns: 66px minmax(0, 1fr) !important;
+    padding: 26px 22px !important;
+  }
+
+  .guarantee-shield,
+  .guarantee-shield svg {
+    width: 62px;
+    height: auto;
+  }
+
+  .mobile-purchase-bar {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    z-index: 9999;
+    min-height: 68px;
+    padding: 8px 8px 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 1px solid rgba(239, 212, 138, .58);
+    border-radius: 12px;
+    background: rgba(5, 31, 25, .94);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .4);
+  }
+
+  .mobile-purchase-bar div {
+    display: grid;
+    gap: 2px;
+    min-width: 78px;
+  }
+
+  .mobile-purchase-bar small {
+    color: rgba(255, 247, 231, .67);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .mobile-purchase-bar strong {
+    color: #efd48a;
+    font-family: var(--font-display);
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .mobile-purchase-bar a {
+    min-height: 50px;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 7px;
+    color: #08251e;
+    background: linear-gradient(135deg, #efd48a, #c89636);
+    font-size: 11.5px;
+    font-weight: 900;
+    letter-spacing: .04em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 420px) {
+  .mobile-purchase-bar {
+    left: 7px;
+    right: 7px;
+  }
+
+  .mobile-purchase-bar a {
+    padding-inline: 13px;
+    font-size: 10.5px;
+  }
+
+  .value-stack p,
+  .value-stack > div {
+    padding-inline: 12px !important;
+    font-size: 12px !important;
+  }
+}
